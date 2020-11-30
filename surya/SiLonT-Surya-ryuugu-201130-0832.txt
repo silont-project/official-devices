@@ -1,0 +1,21 @@
+Changelog:
+- Built with Clang 12 + LLVM Polly Optimizer
+- bundled dtbo.img
+- Use LD LLD
+- merged vdso patchset
+- disable WALT
+- Add simple LMK
+- use binderfs
+- sched improvements
+- dtc: Use AOSP's fork of dtc
+- Add powersuspend driver
+- Add and set set BBR as default TCP Congestion
+- remove some pm_qos usage
+- Added KCAL and KLAPSE driver
+- merged cpuidle patchset
+- disable some logging
+- implement rapid GC for android
+- Shut up haptic spammy logs
+- lib/lz4: update LZ4 decompressor module
+- set lz4 as default zram commpressor
+- etc (For full changelog check https://github.com/silont-project/kernel_xiaomi_surya)
