@@ -19,3 +19,7 @@ Changelog:
 - lib/lz4: update LZ4 decompressor module
 - set lz4 as default zram commpressor
 - etc (For full changelog check https://github.com/silont-project/kernel_xiaomi_surya)
+
+Notes:
+- Tested On derpfest 11
+- Report bugs only with proper logs
