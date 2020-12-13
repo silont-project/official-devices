@@ -1,0 +1,25 @@
+- Merge latest LTS 4.9 linux stable tag
+
+- Merge latest SDM710 CAF tag
+
+- Clean-up camera stack
+
+- Pin little clusters on performance (1.7 Ghz) [Might get reverted]
+
+- Remove unnecessary pm-qos request
+
+- Optimize ufs pm-qos usage
+
+- Nuke top app and CAF cpu boost
+
+- Nuke oppo hypnus driver
+
+- Reset cpufreq and cpuidle to CAF (Removes unnecessary realme stuff)
+
+- Improve BBR
+
+- Fix off screen gesture on Android 11 ROMs (KharaMe Parts)
+
+
+*Notes :
+This will be the last update for android 10 source, thank you for all your support until now, next releases will be done after Android 11 source drop. :D
