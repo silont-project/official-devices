@@ -1,0 +1,27 @@
+- Fixed stuck fastboot 
+- Underclock GPU to 160mhz 
+- add fast charging for USB 2.0 
+- Add Boeffla Wakelock blocker 
+- Add fsync on/off support 
+- fixed DDR bus always 100% 
+- block: queue work on power efficient wq 
+- gpu: drm: use power efficient workingqueues 
+- ext4: optimize fsync for non-rotational drives 
+- msm_adreno_tz: add adrenoboost parameter 
+- lib: update LZ4 compressor module 
+- cpufreq: add blu_schedutil governor 
+- add anxiety i/o sched 
+- Add state notifier support 
+- thermal: Increase thermal trip points to 16 
+- gpu: msm: Don't compile tracing 
+- crypto: boost -o3 performance 
+- input: use -O3 for all input sources 
+- mm: use -O3 & optimise for size 
+- lz4: optimise for size 
+- block: use -O3 & optimise for size 
+- kernel: use -O3 & optimise for size 
+- lzo: use -O3 & optimise for size 
+- fs: use -O3 & optimise for size 
+- selinux: use -O3 & optimise for size 
+- drivers: optimise for size
+- qcacld-3.0: optimize for size
