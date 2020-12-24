@@ -1,7 +1,0 @@
-- Upstreamed To v4.14.212
-- Import wlan driver from LA.UM.8.9.r1-10900-SM6xx.0
-- Update to newer caf tag LA.UM.8.9.r1-10900-SM6xx.0
-- Added touchboost driver (Disable by default)
-- Add back Simple LMK
-- Increase vfs_cache_pressure
-- Increase sched_rt runtime
