@@ -1,7 +1,7 @@
 📲 SiLonT Kernel | [DEVICE] (CODENAME)
 🔨 by [maintainer]
 
-🗓 Build date: 15 November 2020
+🗓 Released: 15 November 2020
 ℹ️ Codename: [sakkarepmu]
 
 🔹[Download](https://pling.com/device_link)
@@ -17,7 +17,7 @@ Ex:
 📲 SiLonT Kernel | Poco X3 NFC (surya)
 🔨 by @Hiitagiii
 
-🗓 Build date: 15 November 2020
+🗓 Released: 15 November 2020
 ℹ️ Codename: Chitandael
 
 🔹[Download](https://pling.com/98234798)
