@@ -142,4 +142,16 @@ if [[ -z $1 ]]; then
     echo "Use post -h or --help for available options"
     exit
 fi
+if [[ -z $device ]]; then
+    echo "ERROR: device not set"
+    exit
+fi
+if [[ -z $filename ]]; then
+    echo "ERROR: filename not set"
+    exit
+fi
+if [[ -z $codename ]]; then
+    echo "ERROR: codename not set"
+    exit
+fi
 post
