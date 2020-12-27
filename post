@@ -137,4 +137,9 @@ Help()
    echo
 }
 
+if [[ -z $1 ]]; then
+    echo "ERROR: No option"
+    echo "Use post -h or --help for available options"
+    exit
+fi
 post
