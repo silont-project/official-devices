@@ -63,7 +63,7 @@ if [[ "${device}" =~ "RMX1851" ]]; then
 fi
 if [[ "${device}" =~ "onclite" ]]; then
     maintainer="BryanHafidzTorvalds"
-    pling="https://www.pling.com/p/placeholder/"
+    pling="https://www.pling.com/p/1464631/"
     devicename="Redmi 7"
 fi
 
