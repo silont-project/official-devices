@@ -5,7 +5,7 @@
 ℹ️ Codename: [sakkarepmu]
 
 🔹[Download](https://pling.com/device_link)
-🔹[Changelog](https://github.com/silont-project/official-devices/raw/master/device/zipname.txt)
+🔹[Cl & Notes](https://github.com/silont-project/official-devices/raw/master/device/zipname.txt)
 🔹[Support Group](https://t.me/yourgroup)
 🔹[XDA Thread](https://xda-developers.com/yourlink)
 
@@ -21,7 +21,7 @@ Ex:
 ℹ️ Codename: Chitandael
 
 🔹[Download](https://pling.com/98234798)
-🔹[Changelog](https://github.com/silont-project/official-devices/raw/master/ginkgo/SilonT-Surya-Chitandael-20200909.txt)
+🔹[Cl & Notes](https://github.com/silont-project/official-devices/raw/master/ginkgo/SilonT-Surya-Chitandael-20200909.txt)
 🔹[Support Group](https://t.me/azrim_lab)
 🔹[XDA Thread](https://xda-developers.com/yourlink)
 
