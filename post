@@ -1,0 +1,139 @@
+#!/bin/bash
+#
+# Copyright (C) 2020 azrim.
+# All rights reserved.
+
+while getopts d:f:c:g:x:h flag
+do
+    case "${flag}" in
+        d) device=${OPTARG};;
+        f) filename=${OPTARG};;
+        c) codename=${OPTARG};;
+        g) group=${OPTARG};;
+        x) xda=${OPTARG};;
+        h) # display Help
+           Help
+           exit;;
+        \?) # incorrect option
+           echo "Error: Invalid option"
+           echo "Use post -h or --help for available options"
+           exit;;
+    esac
+done
+
+post()
+{
+# Var
+CHATID="" # Group/channel chatid (use rose/userbot to get it)
+TELEGRAM_TOKEN="" # Get from botfather
+RELEASED=$(date +'%d %B %Y')
+xdathread="🔹[XDA Thread]($xda)"
+sep="|"
+
+# Device VAR
+if [[ "${device}" =~ "surya" ]]; then
+    maintainer="Hiitagiii"
+    pling="https://www.pling.com/p/1452895/"
+    devicename="Poco X3 NFC"
+fi
+if [[ "${device}" =~ "whyred" ]]; then
+    maintainer="altharena"
+    pling="https://www.pling.com/p/1408532/"
+    devicename="Redmi Note 5"
+fi
+if [[ "${device}" =~ "tulip" ]]; then
+    maintainer="altharena"
+    pling="https://www.pling.com/p/1457781/"
+    devicename="Redmi Note 6 Pro"
+fi
+if [[ "${device}" =~ "miatoll" ]]; then
+    maintainer="ThisIsTag"
+    pling="https://www.pling.com/p/1437666/"
+    devicename="Xiaomi 720G series"
+fi
+if [[ "${device}" =~ "RMX1971" ]]; then
+    maintainer="megakampang"
+    pling="https://www.pling.com/p/1413659/"
+    devicename="Realme 5 Pro"
+fi
+if [[ "${device}" =~ "RMX1851" ]]; then
+    maintainer="Artoriaa"
+    pling="https://www.pling.com/p/1439222/"
+    devicename="Realme 3 Pro"
+fi
+if [[ "${device}" =~ "onclite" ]]; then
+    maintainer="BryanHafidzTorvalds"
+    pling="https://www.pling.com/p/placeholder/"
+    devicename="Redmi 7"
+fi
+
+if [[ "${group}" =~ "" ]]; then
+    group="silont_support"
+fi
+if [[ "${xda}" =~ "" ]]; then
+    xdathread="$xda"
+fi
+
+# Export Telegram.sh
+TELEGRAM_FOLDER="${HOME}"/telegram
+if ! [ -d "${TELEGRAM_FOLDER}" ]; then
+    git clone https://github.com/fabianonline/telegram.sh/ "${TELEGRAM_FOLDER}"
+fi
+
+TELEGRAM="${TELEGRAM_FOLDER}"/telegram
+
+BANNER_LINK="https://github.com/silont-project/official-devices/raw/master/$device/$device.png"
+BANNER="$HOME/$device.png"
+if ! [ -f "${BANNER}" ]; then
+    wget $BANNER_LINK -O $BANNER
+fi
+
+tg_cast() {
+    "${TELEGRAM}" -t "${TELEGRAM_TOKEN}" -c "${CHATID}" -i "$BANNER" -M \
+    "$(
+		for POST in "${@}"; do
+			echo "${POST}"
+		done
+    )"
+}
+
+l1="[Download]($pling)"
+l2="[Cl & Notes](https://github.com/silont-project/official-devices/raw/master/device/"$filename".txt)"
+l3="[Support Group](https://t.me/$group)"
+l41="[Groups](https://t.me/silont_support)"
+l42="[Channel](https://t.me/silont_updates)"
+l4="$l41 $sep $l42"
+
+# Starting
+tg_cast "📲 *SiLonT Kernel $sep $devicename ($device)*" \
+"🔨 by @$maintainer" \
+"" \
+"🗓 Released: *$RELEASED*" \
+"ℹ️ Codename: *$codename*" \
+"" \
+"🔹 $l1" \
+"🔹 $l2" \
+"🔹 $l3" \
+"$xdathread" \
+"" \
+"*Join* $l4" \
+"#${devicename// /} #$device #StayNgelonT"
+}
+
+Help()
+{
+   # Display Help
+   echo "Simple script to post silont kernel updates."
+   echo
+   echo "Usage: post [-option] arguments"
+   echo "options:"
+   echo "d - device codename (e.g. surya)"
+   echo "f - filename without .zip (e.g. SiLonT-Surya-tooru-20201212-1621)"
+   echo "c - kernel codename (e.g. tooru)"
+   echo "g - group username (e.g. azrim_lab - leave it blank if you don't have any)"
+   echo "x - xda thread link (e.g. https://xda-developers.com/blablabla - leave it blank if you don't have any)"
+   echo "h - Print this Help."
+   echo
+}
+
+post
