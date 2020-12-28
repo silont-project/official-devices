@@ -123,6 +123,10 @@ tg_cast() {
     )"
 }
 
+tg_sticker() {
+curl -s -F chat_id="${CHATID}" -F sticker="$1" https://api.telegram.org/bot"${TELEGRAM_TOKEN}"/sendSticker > /dev/null
+}
+
 # message var
 l1="[Download]($pling)"
 l2="[Cl & Notes](https://github.com/silont-project/official-devices/raw/master/"$device"/"$filename".txt)"
@@ -133,6 +137,7 @@ l4="$l41 $sep $l42"
 l5="$xdathread"
 
 # Starting
+tg_sticker "CAACAgUAAxkBAAE-BLRf6Zi5wdrMZaYVBS0RWaj0CqJd2gACYQIAAndoICyTqqxZHIg5px4E"
 tg_cast "📲 *SiLonT Kernel $sep $devicename ($device)*" \
 "🔨 by @$maintainer" \
 "" \
