@@ -3,6 +3,23 @@
 # Copyright (C) 2020 azrim.
 # All rights reserved.
 
+Help()
+{
+   # Display Help
+   echo "Simple script to post silont kernel updates."
+   echo
+   echo "Usage: post [-option] arguments"
+   echo "options:"
+   echo "* d - device codename (e.g. surya)"
+   echo "* f - filename without .zip (e.g. SiLonT-Surya-tooru-20201212-1621)"
+   echo "* c - kernel codename (e.g. tooru)"
+   echo "  g - group username (e.g. azrim_lab - don't declare if don't have any)"
+   echo "  x - xda thread link (e.g. https://xda-developers.com/blablabla - don't declare if don't have any)"
+   echo "  h - Print this Help."
+   echo
+   echo "* is necessary, must be set"
+}
+
 while getopts d:f:c:g:x:h flag
 do
     case "${flag}" in
@@ -16,7 +33,7 @@ do
            exit;;
         \?) # incorrect option
            echo "Error: Invalid option"
-           echo "Use post -h or --help for available options"
+           echo "Use post -h  for available options"
            exit;;
     esac
 done
@@ -65,7 +82,15 @@ if [[ "${device}" =~ "onclite" ]]; then
     pling="https://www.pling.com/p/1464631/"
     devicename="Redmi 7"
 fi
+if [[ "${device}" =~ "tissot" ]]; then
+    maintainer="Yincen"
+    pling="https://www.pling.com/p/1408418/"
+    devicename="MI A1"
+fi
 
+if [[ "${group}" =~ "-x" ]]; then
+    group="silont_support"
+fi
 if [[ -z $group ]]; then
     group="silont_support"
 fi
@@ -98,13 +123,15 @@ tg_cast() {
     )"
 }
 
+# message var
 l1="[Download]($pling)"
-l2="[Cl & Notes](https://github.com/silont-project/official-devices/raw/master/device/"$filename".txt)"
+l2="[Cl & Notes](https://github.com/silont-project/official-devices/raw/master/"$device"/"$filename".txt)"
 l3="[Support Group](https://t.me/$group)"
 l41="[Groups](https://t.me/silont_support)"
 l42="[Channel](https://t.me/silont_updates)"
 l4="$l41 $sep $l42"
 l5="$xdathread"
+
 # Starting
 tg_cast "📲 *SiLonT Kernel $sep $devicename ($device)*" \
 "🔨 by @$maintainer" \
@@ -119,22 +146,6 @@ tg_cast "📲 *SiLonT Kernel $sep $devicename ($device)*" \
 "" \
 "*Join* $l4" \
 "#${devicename// /} #$device #StayNgelonT"
-}
-
-Help()
-{
-   # Display Help
-   echo "Simple script to post silont kernel updates."
-   echo
-   echo "Usage: post [-option] arguments"
-   echo "options:"
-   echo "d - device codename (e.g. surya)"
-   echo "f - filename without .zip (e.g. SiLonT-Surya-tooru-20201212-1621)"
-   echo "c - kernel codename (e.g. tooru)"
-   echo "g - group username (e.g. azrim_lab - leave it blank if you don't have any)"
-   echo "x - xda thread link (e.g. https://xda-developers.com/blablabla - leave it blank if you don't have any)"
-   echo "h - Print this Help."
-   echo
 }
 
 if [[ -z $1 ]]; then
