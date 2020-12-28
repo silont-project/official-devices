@@ -1,0 +1,22 @@
+Changelog:
+- Merge tag 'LA.UM.8.9.r1-11200-SM6xx.0' from CAF
+- Upstreamed to 4.14.212
+- Fix not boot on some rom
+- drop binderfs patch
+- disable some logging
+- cleaned up some drivers
+- memory optimization
+- Locking backports
+- remove VLA's
+- drop LLD
+- block some modules
+- set zram 4GB
+- etc (For full changelog check https://github.com/silont-project/kernel_xiaomi_surya)
+
+Notes:
+- Report bugs only with proper logs
+- Work on A10 and A11 AOSP
+
+Credits:
+- Thanks to Mahajan, xyyx, and YaroST12 for some usefull commits
+- Thanks to all my tester
