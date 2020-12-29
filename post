@@ -42,19 +42,19 @@ post() {
 
 [[ "${DEVICE}" = "onclite" ]] && MAINTAINER="BryanHafidzTorvalds" && PLING="https://www.pling.com/p/1464631/" && DEVICENAME="Redmi 7"
 
-[[ ${DEVICE} = "tissot" ]] && MAINTAINER="Yincen" && PLING="https://www.pling.com/p/1408418/" && DEVICENAME="MI A1"
+[[ "${DEVICE}" = "tissot" ]] && MAINTAINER="Yincen" && PLING="https://www.pling.com/p/1408418/" && DEVICENAME="MI A1"
 
-[[ -z $GROUP ]] && GROUP="silont_support"
+[[ -z "${GROUP}" ]] && GROUP="silont_support"
 
-[[ -z $XDA ]] && xdathread="$XDA" || xdathread="🔹 [XDA Thread]($XDA)"
+[[ -z "${XDA} ]] && xdathread="${XDA}" || xdathread="🔹 [XDA Thread](${XDA})"
 
-BANNER_LINK="https://github.com/silont-project/official-devices/raw/master/$DEVICE/$DEVICE.png"
+BANNER_LINK="https://github.com/silont-project/official-devices/raw/master/${DEVICE}/${DEVICE}.png"
 BANNER="$HOME/$DEVICE.png"
 
-[[ ! -f "${BANNER}" ]] && wget $BANNER_LINK -O $BANNER
+[[ ! -f "${BANNER}" ]] && wget "${BANNER_LINK}" -O "${BANNER}"
 
 l1="[Download]($PLING)"
-l2="[Cl & Notes](https://github.com/silont-project/official-devices/raw/master/"$DEVICE"/"$FILENAME".txt)"
+l2="[Cl & Notes](https://github.com/silont-project/official-devices/raw/master/${DEVICE}/${FILENAME}.txt)"
 l3="[Support group](https://t.me/$GROUP)"
 l41="[Group](https://t.me/silont_support)"
 l42="[Channel](https://t.me/silont_updates)"
