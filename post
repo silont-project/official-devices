@@ -1,173 +1,121 @@
 #!/bin/bash
 #
 # Copyright (C) 2020 azrim.
+# Copyright (C) 2020 naonana.
 # All rights reserved.
 
-Help()
-{
-   # Display Help
-   echo "Simple script to post silont kernel updates."
-   echo
-   echo "Usage: post [-option] arguments"
-   echo "options:"
-   echo "* d - device codename (e.g. surya)"
-   echo "* f - filename without .zip (e.g. SiLonT-Surya-tooru-20201212-1621)"
-   echo "* c - kernel codename (e.g. tooru)"
-   echo "  g - group username (e.g. azrim_lab - don't declare if don't have any)"
-   echo "  x - xda thread link (e.g. https://xda-developers.com/blablabla - don't declare if don't have any)"
-   echo "  h - Print this Help."
-   echo
-   echo "* is necessary, must be set"
-}
-
-while getopts d:f:c:g:x:h flag
-do
-    case "${flag}" in
-        d) device=${OPTARG};;
-        f) filename=${OPTARG};;
-        c) codename=${OPTARG};;
-        g) group=${OPTARG};;
-        x) xda=${OPTARG};;
-        h) # display Help
-           Help
-           exit;;
-        \?) # incorrect option
-           echo "Error: Invalid option"
-           echo "Use post -h  for available options"
-           exit;;
-    esac
-done
-
-post()
-{
-# Var
-CHATID="" # Group/channel chatid (use rose/userbot to get it)
-TELEGRAM_TOKEN="" # Get from botfather
+# Vars #
+CHATID="chatidplaceholder"
+TG_TOKEN="tgtokenplaceholder"
 RELEASED=$(date +'%d %B %Y')
 sep="|"
 
-# Device VAR
-if [[ "${device}" =~ "surya" ]]; then
-    maintainer="Hiitagiii"
-    pling="https://www.pling.com/p/1452895/"
-    devicename="Poco X3 NFC"
-fi
-if [[ "${device}" =~ "whyred" ]]; then
-    maintainer="altharena"
-    pling="https://www.pling.com/p/1408532/"
-    devicename="Redmi Note 5"
-fi
-if [[ "${device}" =~ "tulip" ]]; then
-    maintainer="altharena"
-    pling="https://www.pling.com/p/1457781/"
-    devicename="Redmi Note 6 Pro"
-fi
-if [[ "${device}" =~ "miatoll" ]]; then
-    maintainer="ThisIsTag"
-    pling="https://www.pling.com/p/1437666/"
-    devicename="Xiaomi 720G series"
-fi
-if [[ "${device}" =~ "RMX1971" ]]; then
-    maintainer="megakampang"
-    pling="https://www.pling.com/p/1413659/"
-    devicename="Realme 5 Pro"
-fi
-if [[ "${device}" =~ "RMX1851" ]]; then
-    maintainer="Artoriaa"
-    pling="https://www.pling.com/p/1439222/"
-    devicename="Realme 3 Pro"
-fi
-if [[ "${device}" =~ "onclite" ]]; then
-    maintainer="BryanHafidzTorvalds"
-    pling="https://www.pling.com/p/1464631/"
-    devicename="Redmi 7"
-fi
-if [[ "${device}" =~ "tissot" ]]; then
-    maintainer="Yincen"
-    pling="https://www.pling.com/p/1408418/"
-    devicename="MI A1"
-fi
+TG_DIR="${HOME}"/telegram
+[[ ! -d "${TG_DIR}" ]] && git clone https://github.com/fabianonline/telegram.sh/ "${TELEGRAM_FOLDER}"
+TELEGRAM="${TG_DIR}"/telegram
 
-if [[ "${group}" =~ "-x" ]]; then
-    group="silont_support"
-fi
-if [[ -z $group ]]; then
-    group="silont_support"
-fi
-if [[ -z $xda ]]; then
-    xdathread="$xda"
-else
-    xdathread="🔹 [XDA Thread]($xda)"
-fi
-
-# Export Telegram.sh
-TELEGRAM_FOLDER="${HOME}"/telegram
-if ! [ -d "${TELEGRAM_FOLDER}" ]; then
-    git clone https://github.com/fabianonline/telegram.sh/ "${TELEGRAM_FOLDER}"
-fi
-
-TELEGRAM="${TELEGRAM_FOLDER}"/telegram
-
-BANNER_LINK="https://github.com/silont-project/official-devices/raw/master/$device/$device.png"
-BANNER="$HOME/$device.png"
-if ! [ -f "${BANNER}" ]; then
-    wget $BANNER_LINK -O $BANNER
-fi
-
-tg_cast() {
-    "${TELEGRAM}" -t "${TELEGRAM_TOKEN}" -c "${CHATID}" -i "$BANNER" -M \
+tg_msg() {
+"${TELEGRAM}" -t "${TG_TOKEN}" -c "${CHATID}" -i "$BANNER" -M \
     "$(
-		for POST in "${@}"; do
-			echo "${POST}"
-		done
+                for POST in "${@}"; do
+                        echo "${POST}"
+                done
     )"
 }
 
 tg_sticker() {
-curl -s -F chat_id="${CHATID}" -F sticker="$1" https://api.telegram.org/bot"${TELEGRAM_TOKEN}"/sendSticker > /dev/null
+curl -s -F chat_id="${CHATID}" -F sticker="$1" https://api.telegram.org/bot"${TG_TOKEN}"/sendSticker > /dev/null
 }
 
-# message var
-l1="[Download]($pling)"
-l2="[Cl & Notes](https://github.com/silont-project/official-devices/raw/master/"$device"/"$filename".txt)"
-l3="[Support Group](https://t.me/$group)"
-l41="[Groups](https://t.me/silont_support)"
+post() {
+[[ "${DEVICE}" = "surya" ]] && MAINTAINER="Hiitagiii" && PLING="https://www.pling.com/p/1452895/" && DEVICENAME="Poco X3 NFC"
+
+[[ "${DEVICE}" = "whyred" ]] && MAINTAINER="altharena" && PLING="https://www.pling.com/p/1408532/" && DEVICENAME="Redmi Note 5"
+
+[[ "${DEVICE}" =~ "tulip" ]] && MAINTAINER="altharena" && PLING="https://www.pling.com/p/1457781/" && DEVICENAME="Redmi Note 6 Pro"
+
+[[ "${DEVICE}" = "miatoll" ]] && MAINTAINER="ThisIsTag" && PLING="https://www.pling.com/p/1437666/" && DEVICENAME="Xiaomi 720G series"
+
+[[ "${DEVICE}" = "RMX1971" ]] && MAINTAINER="megakampang" && PLING="https://www.pling.com/p/1413659/" && DEVICENAME="Realme 5 Pro"
+
+[[ "${DEVICE}" = "RMX1851" ]] && MAINTAINER="Artoriaa" && PLING="https://www.pling.com/p/1439222/" && DEVICENAME="Realme 3 Pro"
+
+[[ "${DEVICE}" = "onclite" ]] && MAINTAINER="BryanHafidzTorvalds" && PLING="https://www.pling.com/p/1464631/" && DEVICENAME="Redmi 7"
+
+[[ ${DEVICE} = "tissot" ]] && MAINTAINER="Yincen" && PLING="https://www.pling.com/p/1408418/" && DEVICENAME="MI A1"
+
+[[ -z $GROUP ]] && GROUP="silont_support"
+
+[[ -z $XDA ]] && xdathread="$XDA" || xdathread="🔹 [XDA Thread]($XDA)"
+
+BANNER_LINK="https://github.com/silont-project/official-devices/raw/master/$DEVICE/$DEVICE.png"
+BANNER="$HOME/$DEVICE.png"
+
+[[ ! -f "${BANNER}" ]] && wget $BANNER_LINK -O $BANNER
+
+l1="[Download]($PLING)"
+l2="[Cl & Notes](https://github.com/silont-project/official-devices/raw/master/device/"$FILENAME".txt)"
+l3="[Support GROUP](https://t.me/$GROUP)"
+l41="[GROUPs](https://t.me/silont_support)"
 l42="[Channel](https://t.me/silont_updates)"
 l4="$l41 $sep $l42"
 l5="$xdathread"
 
-# Starting
 tg_sticker "CAACAgUAAxkBAAE-BLRf6Zi5wdrMZaYVBS0RWaj0CqJd2gACYQIAAndoICyTqqxZHIg5px4E"
-tg_cast "📲 *SiLonT Kernel $sep $devicename ($device)*" \
-"🔨 by @$maintainer" \
+tg_msg \
+"📲 *SiLonT Kernel* $sep $DEVICE ($DEVICENAME)" \
+"🔨 by @$MAINTAINER" \
 "" \
 "🗓 Released: *$RELEASED*" \
-"ℹ️ Codename: *$codename*" \
+"ℹ️ Codename: *$CODENAME*" \
 "" \
 "🔹 $l1" \
 "🔹 $l2" \
 "🔹 $l3" \
 "$l5" \
-"" \
 "*Join* $l4" \
-"#${devicename// /} #$device #StayNgelonT"
+"#${DEVICE// /} $device #StayNgelonT"
 }
 
-if [[ -z $1 ]]; then
-    echo "ERROR: No option"
-    echo "Use post -h or --help for available options"
-    exit
-fi
-if [[ -z $device ]]; then
-    echo "ERROR: device not set"
-    exit
-fi
-if [[ -z $filename ]]; then
-    echo "ERROR: filename not set"
-    exit
-fi
-if [[ -z $codename ]]; then
-    echo "ERROR: codename not set"
-    exit
-fi
+help() {
+echo -e "Simple script to post silont kernel updates.\n" \
+"\n" \
+"Usage: post [-option] arguments\n" \
+"options:\n" \
+"* d - device codename (e.g. surya)\n" \
+"* f - filename without .zip (e.g. SiLonT-Surya-tooru-20201212-1621)\n" \
+"* c - kernel codename (e.g. tooru)\n" \
+"  g - group username (e.g. azrim_lab - don't declare if don't have any)\n" \
+"  x - xda thread link (e.g. https://xda-developers.com/blablabla - don't declare if don't have any)\n" \
+"  h - Print this Help."
+
+"* is necessary, must be set"
+}
+
+while getopts d:f:c:g:x:h flag
+do
+    case "${flag}" in
+        d) DEVICE=${OPTARG};;
+        f) FILENAME=${OPTARG};;
+        c) CODENAME=${OPTARG};;
+        g) GROUP=${OPTARG};;
+        x) XDA=${OPTARG};;
+        h) help
+           exit;;
+        \?) # Incorrect option
+           echo "Error: Invalid option !"
+           echo "Use post -h for available options"
+           exit;;
+    esac
+done
+
 post
+
+[[ -z $1 ]] && echo "ERROR: No option" && echo "Use post -h for available options"
+    exit
+
+[[ -z $DEVICE ]] && echo "ERROR: Device not set" && exit
+
+[[ -z $FILENAME ]] && echo "ERROR: File name not set" && exit
+
+[[ -z $CODENAME ]] && echo "ERROR: Codename not set" && exit
