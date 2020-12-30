@@ -54,9 +54,9 @@ BANNER="$HOME/$DEVICE.png"
 [[ ! -f "${BANNER}" ]] && wget $BANNER_LINK -O $BANNER
 
 l1="[Download]($PLING)"
-l2="[Cl & Notes](https://github.com/silont-project/official-devices/raw/master/device/"$FILENAME".txt)"
-l3="[Support GROUP](https://t.me/$GROUP)"
-l41="[GROUPs](https://t.me/silont_support)"
+l2="[Cl & Notes](https://github.com/silont-project/official-devices/raw/master/"$DEVICE"/"$FILENAME".txt)"
+l3="[Support group](https://t.me/$GROUP)"
+l41="[Group](https://t.me/silont_support)"
 l42="[Channel](https://t.me/silont_updates)"
 l4="$l41 $sep $l42"
 l5="$xdathread"
@@ -73,8 +73,9 @@ tg_msg \
 "🔹 $l2" \
 "🔹 $l3" \
 "$l5" \
+"" \
 "*Join* $l4" \
-"#${DEVICE// /} $device #StayNgelonT"
+"#${DEVICENAME// /} $DEVICE #StayNgelonT"
 }
 
 help() {
@@ -83,7 +84,7 @@ echo -e "Simple script to post silont kernel updates.\n" \
 "Usage: post [-option] arguments\n" \
 "options:\n" \
 "* d - device codename (e.g. surya)\n" \
-"* f - filename without .zip (e.g. SiLonT-Surya-tooru-20201212-1621)\n" \
+"* f - changelog filename without .txt (e.g. SiLonT-Surya-tooru-20201212-1621)\n" \
 "* c - kernel codename (e.g. tooru)\n" \
 "  g - group username (e.g. azrim_lab - don't declare if don't have any)\n" \
 "  x - xda thread link (e.g. https://xda-developers.com/blablabla - don't declare if don't have any)\n" \
