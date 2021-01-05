@@ -44,6 +44,8 @@ post() {
 
 [[ "${DEVICE}" = "tissot" ]] && MAINTAINER="Yincen" && PLING="https://www.pling.com/p/1408418/" && DEVICENAME="MI A1"
 
+[[ "${DEVICE}" = "ginkgo" ]] && MAINTAINER="fakhiralkda" && PLING="https://www.pling.com/p/1413487/" && DEVICENAME="Redmi Note 8"
+
 [[ -z "${GROUP}" ]] && GROUP="silont_support"
 
 [[ -z "${XDA} ]] && xdathread="${XDA}" || xdathread="🔹 [XDA Thread](${XDA})"
