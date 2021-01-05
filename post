@@ -48,7 +48,7 @@ post() {
 
 [[ -z "${GROUP}" ]] && GROUP="silont_support"
 
-[[ -z "${XDA} ]] && xdathread="${XDA}" || xdathread="🔹 [XDA Thread](${XDA})"
+[[ -z "${XDA}" ]] && xdathread="${XDA}" || xdathread="🔹 [XDA Thread](${XDA})"
 
 [[ -z "${CODENAME}" ]] && KERNEL_CODENAME="${CODENAME}" || KERNEL_CODENAME="ℹ️ Codename: *$CODENAME*"
 
@@ -70,9 +70,9 @@ tg_sticker "CAACAgUAAxkBAAE-BLRf6Zi5wdrMZaYVBS0RWaj0CqJd2gACYQIAAndoICyTqqxZHIg5
 tg_msg \
 "📲 *SiLonT Kernel* $sep $DEVICE ($DEVICENAME)" \
 "🔨 by @$MAINTAINER" \
-"l1" \
-"🗓 Released: *$RELEASED*" \
 "" \
+"🗓 Released: *$RELEASED*" \
+"$l1" \
 "" \
 "🔹 $l2" \
 "🔹 $l3" \
