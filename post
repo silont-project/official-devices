@@ -115,11 +115,10 @@ do
     esac
 done
 
-post
-
-[[ -z $1 ]] && echo "ERROR: No option" && echo "Use post -h for available options"
-    exit
+[[ -z $1 ]] && echo "ERROR: No option" && echo "Use post -h for available options" && exit
 
 [[ -z $DEVICE ]] && echo "ERROR: Device not set" && exit
 
 [[ -z $FILENAME ]] && echo "ERROR: File name not set" && exit
+
+post
