@@ -90,11 +90,12 @@ echo -e "Simple script to post silont kernel updates.\n" \
 "options:\n" \
 "* d - device codename (e.g. surya)\n" \
 "* f - changelog filename without .txt (e.g. SiLonT-Surya-tooru-20201212-1621)\n" \
-"* c - kernel codename (e.g. tooru)\n" \
+"  c - kernel codename (e.g. tooru)\n" \
 "  g - group username (e.g. azrim_lab - don't declare if don't have any)\n" \
 "  x - xda thread link (e.g. https://xda-developers.com/blablabla - don't declare if don't have any)\n" \
-"  h - Print this Help."
-
+"  h - Print this Help." \
+"\n" \
+"\n" \
 "* is necessary, must be set"
 }
 
