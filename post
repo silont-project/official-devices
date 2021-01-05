@@ -80,7 +80,7 @@ tg_msg \
 "$l6" \
 "" \
 "*Join* $l5" \
-"#${DEVICENAME// /} $DEVICE #StayNgelonT"
+"#${DEVICENAME// /} #$DEVICE #StayNgelonT"
 }
 
 help() {
