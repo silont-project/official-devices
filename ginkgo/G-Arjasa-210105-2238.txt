@@ -1,0 +1,17 @@
+Changelogs:
+- Rebase rom QuickSilver
+- Upstreamed to 4.14.213
+- Merge tag 'LA.UM.8.1.r1-16600-sm8150.0' from CAF
+- Import wireguard v1.0.20201221
+- Disable QCOM_MEMORY_DUMP_V2
+- Enable K-lapse v5.0
+- etc (https://github.com/silont-project/kernel_xiaomi_ginkgo/commits/aosp)
+
+Notes:
+- Report bugs only with proper logs
+- Work on AOSP A1O
+- Willow not tested
+
+Credits & Thanks:
+- Fadlyas07 for sharing knowledge
+- ghostrider-reborn for QuickSilver
