@@ -1,5 +1,5 @@
 Changelogs:
-- Rebase rom QuickSilver
+- Rebase from QuickSilver
 - Upstreamed to 4.14.213
 - Merge tag 'LA.UM.8.1.r1-16600-sm8150.0' from CAF
 - Import wireguard v1.0.20201221
@@ -9,7 +9,7 @@ Changelogs:
 
 Notes:
 - Report bugs only with proper logs
-- Work on AOSP A1O
+- Work on AOSP A10
 - Willow not tested
 
 Credits & Thanks:
