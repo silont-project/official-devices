@@ -1,14 +1,15 @@
-- Upstreamed To v4.14.212
-- Import wlan driver from LA.UM.8.9.r1-10900-SM6xx.0
-- Update to newer caf tag LA.UM.8.9.r1-10900-SM6xx.0
-- Added touchboost driver (Disable by default)
-- Add back Simple LMK
-- Increase vfs_cache_pressure
-- Increase sched_rt runtime to 1000000 
-- workqueue: Schedule workers on CPU0 or 0-5 by default 
-- sched: tweak sched_min_task_util_for_boost and sched_min_task_util_for_colocation
-- power: smb5-lib: Query FLASH_TRIGGER only for PMI632 
-- usb/phy/otg-wakelock: Reduce the wakelock timeout to 1 second
-- power: Drop “_3P5” from type to get recognized in AOSP
-- zram: use lz4 compression
-- disable memcg
+- Upstreamed To v4.14.213
+- localversion: Remove dirty + sign from kernel name
+- printk: Add sleep time to timestamps 
+- Implement usb fastcharge
+- Added fsync on/off support
+- Import sdFAT driver 
+- drivers:i2c: Reduce touch latency by 0.5-1ms by just making it use block transfer mode for small transactions
+- Add boeffla wakelock blocker driver
+- Add wireguard version v1.0.20201221
+- Use -O3 on clang
+- sched/energy: Check out to Android 4.14 common kernel 
+- Enable Powersuspend
+- Build with Clang LTO
+- Implement Rapid_GC
+- Add module turbo charger inbuilt to make charging max to 5000mA
