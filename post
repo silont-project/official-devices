@@ -11,7 +11,7 @@ RELEASED=$(date +'%d %B %Y')
 sep="|"
 
 TG_DIR="${HOME}"/telegram
-[[ ! -d "${TG_DIR}" ]] && git clone https://github.com/fabianonline/telegram.sh/ "${TELEGRAM_FOLDER}"
+[[ ! -d "${TG_DIR}" ]] && git clone https://github.com/fabianonline/telegram.sh/ "${TG_DIR}"
 TELEGRAM="${TG_DIR}"/telegram
 
 tg_msg() {
