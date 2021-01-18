@@ -1,0 +1,19 @@
+Changelogs:
+  - Back to old SiLonT base
+  - Upstreamed to 4.14.216
+  - Merge tag 'LA.UM.8.1.r1-16600-sm8150.0' from CAF
+  - Merge tag 'LA.UM.9.11.r1-02600-NICOBAR.0' from CAF
+  - Sched improvements
+  - Omit debug logging code
+  - Remove VLA usage
+  - Set 2GB zram
+  - zram: Use LZ4 as default compressor 
+  - Import wireguard v1.0.20201221
+  - ..... (omitted)
+
+Notes:
+  - Report bugs only with proper logs
+  - Arjasa x10 for A10
+  - Bluto x11 for A11
+  - MIUI not tested
+  - Willow not tested
