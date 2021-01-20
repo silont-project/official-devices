@@ -1,0 +1,24 @@
+### SiLonT Kernel For SDM660 Platform devices
+### Supported device: whyred & tulip
+
+# Changelog:
+- Merge v4.4.252
+- Compiled with AOSP Clang 12.0.1 + GCC 11 
+- Update WiFi Driver to LA.UM.7.2.r1-09600-sdm660.0 
+- Merge LA.UM.8.2.r2-03800-sdm660.0 CAF Tag
+- Backport new vmalloc for "large performance benefits" (Thanks to Pzqqt for porting to 4.4)
+- Switch to Simple Low Memory Killer
+- Add Polly optimizer
+- Remove VLA's
+- Use New Energy Model for sdm636
+- Update GPU Chip id to 512
+- Now, default TCP must be BBRv2
+- Etc (For full changelog check https://github.com/silont-project/android_kernel_xiaomi_sdm660/tree/zhard)
+
+# Notes for tulip:
+- Thanks to @ kiroio (Telegram) for testing
+- Report bugs here --> https://t.me/pjorektneira 
+
+# Notes for whyred:
+- LED work only on common tree ROM (Lineage, Nusantara, etc)
+- Report bugs here --> https://t.me/pjorektneira
