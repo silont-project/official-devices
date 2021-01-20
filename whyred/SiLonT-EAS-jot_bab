@@ -1,6 +1,10 @@
 ### SiLonT Kernel For SDM660 Platform devices
 ### Supported device: whyred & tulip
 
+
+### I'AM NOT SUPPORTING MIUI, IF IT DOESN'T BOOT, DON'T REPORT ANYTHING
+
+
 # Changelog:
 - Merge v4.4.252
 - Compiled with AOSP Clang 12.0.1 + GCC 11 
