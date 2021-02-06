@@ -40,3 +40,7 @@
 •back to 180mhz for low GPU
 •Reduce timer frequency to 100 Hz
 •use efficient frequency from freqbench
+
+#Notes 
+Support all rom base fimware realme Ui A11/10
+
