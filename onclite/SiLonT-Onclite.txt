@@ -1,6 +1,2 @@
 Changelogs:
-- Upstreamed to 4.9.257
-- Merged CAF Tag LA.UM.8.6.2.r1-08900-89xx.0
-- Compiled with GengKapak-Clang (Clang 13)
-- Remove Driver 88xxAU for Nethunter
-- Optimize and Debloat defconfig
+- Fix Lag or Stuck playing videos in WhatsApp or Youtube.
