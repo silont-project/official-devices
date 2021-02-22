@@ -1,0 +1,24 @@
+SilonT - Kernel
+
+- Release 6 - Yuki
+
+- Kernel version : 4.9.257
+
+- Compiler : SilonT Clang (Clang 13) with LTO
+
+-- Notes --
+
+- Initial Android 11 based kernel, yay
+
+Kernel is rebased to msm89xx Android 11 tag with SDM710 tag merged in, 
+we also switched to efficient CPU freqs, thanks to kdrag0n and kras!
+
+Both stock ROM (Realme UI), ports (Oxygen OS, MIUI) and custom ROMs are supported,
+Although, off-screen gesture on stock and Oxygen OS does not work cause of a different node. Ill need some more time to fix it so please bear with it :)
+
+A full changelog can be read here https://github.com/silont-project/kernel_realme_RMX1971/commits/11/master
+
+Feel free to tag me on telegram (@naogairu) if you experienced any bugs, DM is fine too
+
+Thanks! :D
+
