@@ -1,2 +1,6 @@
 Changelogs:
-- Fix Lag or Stuck playing videos in WhatsApp or Youtube.
+- Upstreamed to 4.9.258
+- Merged CAF TAG LA.UM.8.6.2.r1-09200-89xx.0
+- Use the stock config for /proc/config.gz
+
+Notes : Don't forget to wipe dalvik and cache after flash kernel.
