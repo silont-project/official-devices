@@ -30,7 +30,7 @@ curl -s -F chat_id="${CHATID}" -F sticker="$1" https://api.telegram.org/bot"${TG
 post() {
 [[ "${DEVICE}" = "surya" ]] && MAINTAINER="Hiitagiii" && PLING="https://www.pling.com/p/1452895/" && DEVICENAME="Poco X3 NFC"
 
-[[ "${DEVICE}" = "whyred" ]] && MAINTAINER="eve_enryu" && PLING="https://www.pling.com/p/1408532/" && DEVICENAME="Redmi Note 5"
+[[ "${DEVICE}" = "whyred" ]] && MAINTAINER="eve\_enryu" && PLING="https://www.pling.com/p/1408532/" && DEVICENAME="Redmi Note 5"
 
 [[ "${DEVICE}" =~ "tulip" ]] && MAINTAINER="eve_enryu" && PLING="https://www.pling.com/p/1457781/" && DEVICENAME="Redmi Note 6 Pro"
 
