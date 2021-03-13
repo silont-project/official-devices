@@ -1,0 +1,25 @@
+Changelogs SiLonT-Surya-Fubuki-210313-1516:
+
+* Rebased from Linux v4.14.225 (so forget about older version)
+* Merged latest CAF Tag LA.UM.8.9.1.r1-01700-QCS610.0
+* Sched improvements
+* Disable schedtune
+* Backport Uclamp
+* Add file blocker to disable some magisk modules
+* Use efficient freq from @yarost12
+* optimize UFS
+* Add boeffla_wl_blocker
+* Set LZ4 as default zram compression
+* Silence some spammy logs
+* Add Simple Low Memory Killer
+* Add BBR2 and set as default
+* Add powersuspend driver
+* import sdFat driver
+* Fixed weird audio bugs (Thanks to @agustkid)
+* Full Changelogs -> https://github.com/silont-project/kernel_xiaomi_surya/commits/FBK
+
+Notes:
+Supported A10/11
+Miui? -> https://t.me/silont_support/396000
+
+Thanks to @yarost12 @darkhz @wight554
