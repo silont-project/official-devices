@@ -1,10 +1,15 @@
 Changelogs:
 - Upstreamed to 4.9.261
 - Merged CAF TAG LA.UM.8.6.2.r1-08100-89xx.0
+- Update wireguard to version 1.0.20210219
 - Fix uninitialized variable usage and some memory leaks
-- Reduce latency while processing ioctls and atomic ioctls
 - Fix transposed panel_switch and panel_post_switch
-- Improve the scheduler
 - Fix load balancing for big tasks
+- Reduce latency while processing ioctls and atomic ioctls
+- Reduce touch latency
+- Improve the scheduler
+- Change default SCHED_RR timeslice from 100 ms to 1 jiffy
+- Affine unbound workqueues to little CPUs by default
+- Add support for LLVM's Polly optimizer
 
 Notes : Don't forget to wipe dalvik and cache after flash kernel.
