@@ -1,0 +1,57 @@
+### SiLonT Kernel For SDM660 Platform devices
+### Supported device: whyred , tulip, wayne, lavender
+###
+
+###
+### I AM NOT SUPPORTING MIUI, IF IT DOESN'T BOOT ON MIUI, DON'T REPORT ANYTHING
+###
+
+### Changelog:
+- Clean Up Source once again
+- Compiled with latest EvaGCC (GCC 11.0.1) + LTO
+- Merge v4.4.261
+- Merged kernel.lnx.4.4.r{38}{42}{44}-rel
+- Added OC (only sdm636) + Efficient Freq variant (user request ¯\_(ツ)_/¯)
+- Updated AnyKernel3 to latest version
+- Removed pm_qos usage on some drivers
+- Removed z3fold related stuff (Causing MASSIVE memory leak)
+- Implement Sony LowmemoryKiller TNG from sony sdm845 4.14
+- Checkout sched/energy.c to latest 4.14 android common kernel
+- Reverted swapiness hardcode, and set 50 as default value
+- Improvement on PELT stuff
+- Use Sultan Bench SDM660 Energy Model as default, both sdm636 and sdm660
+- Introduced Simplified energy calculation
+- Checkout schedutil https://github.com/kdrag0n/proton_zf6/commit/4b4e8e856c9cc3d0cbec3d1aba6bb8122f2c4918
+- Some scheduler rice from Kuran Kaname
+- Vmalloc improvement
+- Checkouted ashmem to 4.14 & rewrite it
+- Too much I can't remember
+- Etc (For full changelog check https://github.com/silont-project/android_kernel_xiaomi_sdm660/tree/gcc-lto)
+
+### Important Notes :
+- Need to flash EAS perf hal separately
+- Make sure you magisk version is 21.4 or above
+- OC(Effiecient Freq) Build are named EF on the zip. While the normal freq named EQ on the zip
+- FLASH OC AT YOUR OWN RISK!
+- Report bugs here --> https://t.me/pjorektneira
+
+### Special thanks:
+- Thanks to @ kiroio for testing tulip build
+- Thanks to @ dimasinc & @ Isakabangtanga for testing lavender build
+- Thanks to @ HemeinSelein & @ yuudachiP for testing jane build
+
+
+### Short Predicted QnA:
+1. Q: why no uclamp?
+    A: the benefit of uclamp depends on kernel scheduler.
+         In my case, it give very bad result (even worse than without uclamp shit)
+
+2. Q: What is Efficient freq?
+     A: you will see 1400mhz as your minimum cpu frequency
+          and kernel will use fewer freq step (still give good enough battery)
+ 
+ 3. Q: Why took so long time?
+      A: reason is
+           1. School
+           2. Some problem on real life
+           3. busy with my minecraft world lmao
