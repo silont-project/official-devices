@@ -1,0 +1,138 @@
+46a67ba0c2ca Merge remote-tracking branch 'origin/FBK' into weekly
+d8b1bc5498ba Merge branch 'upstream' into FBK
+6cbd50344090 Merge tag 'v4.14.228' of https://source.codeaurora.org/quic/la/kernel/msm-4.14 into upstream
+20e2d11477ac Revert "mm: Micro-optimize PID map reads for arm64"
+e5f103a5447a treewide: Weekly Automated Build
+bd634aa64163 Linux 4.14.228
+db108b67d813 xen-blkback: don't leak persistent grants from xen_blkbk_map()
+769207ad6afb can: peak_usb: Revert "can: peak_usb: add forgotten supported devices"
+e436212b3f7e ext4: add reclaim checks to xattr code
+d2ddd5417f6d mac80211: fix double free in ibss_leave
+749d2e33bfba net: qrtr: fix a kernel-infoleak in qrtr_recvmsg()
+43c9bffda3a2 net: sched: validate stab values
+2f2095844840 can: dev: Move device back to init netns on owning netns delete
+b8edc965a2e3 locking/mutex: Fix non debug version of mutex_lock_io_nested()
+531fa1b28c81 scsi: mpt3sas: Fix error return code of mpt3sas_base_attach()
+3674bcb773a4 scsi: qedi: Fix error return code of qedi_alloc_global_queues()
+be4153fe56ee perf auxtrace: Fix auxtrace queue conflict
+717d9d88fbd9 ACPI: scan: Use unique number for instance_no
+d39b29aa985d ACPI: scan: Rearrange memory allocation in acpi_device_add()
+aea037bb753c RDMA/cxgb4: Fix adapter LE hash errors while destroying ipv6 listening server
+a9923184fa20 net/mlx5e: Fix error path for ethtool set-priv-flag
+235d33fe3dfa arm64: kdump: update ppos when reading elfcorehdr
+2ed1838a5108 drm/msm: fix shutdown hook in case GPU components failed to bind
+8c6355741299 net: stmmac: dwmac-sun8i: Provide TX and RX fifo sizes
+0a6af7918896 net: cdc-phonet: fix data-interface release on probe failure
+83f1022ddc83 mac80211: fix rate mask reset
+95fdd07859d2 can: m_can: m_can_do_rx_poll(): fix extraneous msg loss warning
+ecd921f5e448 can: c_can: move runtime PM enable/disable to c_can_platform
+200107c1eb93 can: c_can_pci: c_can_pci_remove(): fix use-after-free
+170ae6f54252 can: peak_usb: add forgotten supported devices
+e7e81fdefa01 ftgmac100: Restart MAC HW once
+12dbbbab7fee net/qlcnic: Fix a use after free in qlcnic_83xx_get_minidump_template
+b58f83a38053 e1000e: Fix error handling in e1000_set_d0_lplu_state_82571
+02a51f63c48e e1000e: add rtnl_lock() to e1000_reset_task
+00db5f4ef9a7 net: dsa: bcm_sf2: Qualify phydev->dev_flags based on port
+57b7c1fc18b9 macvlan: macvlan_count_rx() needs to be aware of preemption
+dbc5d18db38e libbpf: Fix INSTALL flag order
+269c3638066c bus: omap_l3_noc: mark l3 irqs as IRQF_NO_THREAD
+ba73e621ced5 dm ioctl: fix out of bounds array access when no devices
+e110c8a8d921 ARM: dts: at91-sama5d27_som1: fix phy address to 7
+e960ef6a82bb arm64: dts: ls1043a: mark crypto engine dma coherent
+f3f23501d325 arm64: dts: ls1012a: mark crypto engine dma coherent
+a350a1ae2d10 arm64: dts: ls1046a: mark crypto engine dma coherent
+7f39bb5c47e6 squashfs: fix xattr id and id lookup sanity checks
+69606910678d squashfs: fix inode lookup sanity checks
+41cbb35e86b7 ia64: fix ptrace(PTRACE_SYSCALL_INFO_EXIT) sign
+d557400f750a ia64: fix ia64_syscall_get_set_arguments() for break-based syscalls
+5fbe977185b9 nfs: we don't support removing system.nfs4_acl
+352e23b69d39 drm/radeon: fix AGP dependency
+8511c7e98c2b u64_stats,lockdep: Fix u64_stats_init() vs lockdep
+16ff0df4f56f sparc64: Fix opcode filtering in handling of no fault loads
+c646c419af7b atm: idt77252: fix null-ptr-dereference
+2885d739c302 atm: uPD98402: fix incorrect allocation
+0a4605f18c8a net: wan: fix error return code of uhdlc_init()
+541ff27d29a1 net: hisilicon: hns: fix error return code of hns_nic_clear_all_rx_fetch()
+af528432f18c NFS: Correct size calculation for create reply length
+972cbf2ac21d nfs: fix PNFS_FLEXFILE_LAYOUT Kconfig default
+2304cbc924e1 gpiolib: acpi: Add missing IRQF_ONESHOT
+11081ea5e95b sun/niu: fix wrong RXMAC_BC_FRM_CNT_COUNT count
+4352c3fae8f2 net: tehuti: fix error return code in bdx_probe()
+93057d30fa85 ixgbe: Fix memleak in ixgbe_configure_clsu32
+498163bdff5c Revert "r8152: adjust the settings about MAC clock speed down for RTL8153"
+a8045f49c9d6 atm: lanai: dont run lanai_dev_close if not open
+ba71f74c74d2 atm: eni: dont release is never initialized
+afacbe5e7d6d powerpc/4xx: Fix build errors from mfdcr()
+7a7c9ced4cb1 net: fec: ptp: avoid register access when ipg clock is disabled
+9f1cb004b5e0 Merge branch 'upstream' into FBK
+52067db095dc Merge tag 'v4.14.227' of https://source.codeaurora.org/quic/la/kernel/msm-4.14 into upstream
+6aa3576b0bd9 net/sched: silence "quantum of class is big" log warning
+9f5c9ee4f890 scsi: ufs: disallow SECURITY_PROTOCOL_IN without _OUT
+86910ec19704 DNM: fs: fuse: don't wait forever in request_wait_answer
+9a63fe67e845 sched: Fix rq->nr_iowait ordering
+f04d88a818c1 sched: Fix data-race in wakeup
+3a5b9e5c1b9d sched: Fix race against ptrace_freeze_trace()
+c41e660b0e6b sched: Fix loadavg accounting race
+bba4e3a6a368 sched/core: Fix ttwu() race
+aeb9ed31dc70 smp: Optimize send_call_function_single_ipi()
+9eb0d61123b9 sched/core: Offload wakee task activation if it the wakee is descheduling
+28f1c4fab94d sched/core: Optimize ttwu() spinning on p->on_cpu
+20674ef0b448 sched/core: Fix preempt warning in ttwu
+a0108f625ad1 sched/core: Optimize try_to_wake_up() for local wakeups
+4a968a18ea98 sched/core: Skip rq lock in try_to_wake_up() when WALT is disabled
+72c40818872a mm: Micro-optimize PID map reads for arm64
+ebfe5f79ca8c qpnp-smb5: silence some kernel spam
+1790daab028f clk: qcom: clk-cpu-osm: Set min freq to 576MHz
+f78b5bafa3e6 nt36xxx: remove IRQF_NO_SUSPEND flag
+7a8b13b738d5 surya_defconfig: disable process reclaim
+e8242ba760ec ARM64: sdmmagpie: switch to calculated capacities
+d5ea42b2f873 ARM64: sdmmagpie: switch back to full freq tables
+670d6552eda8 Linux 4.14.227
+2d5025afb05b genirq: Disable interrupts for force threaded handlers
+fe778c33aaa9 ext4: fix potential error in ext4_do_update_inode
+470f69cb3742 ext4: do not try to set xattr into ea_inode if value is empty
+1b46d1d9d02e ext4: find old entry again if failed to rename whiteout
+c6159407348e x86: Introduce TS_COMPAT_RESTART to fix get_nr_restart_syscall()
+400e3df46a76 x86: Move TS_COMPAT back to asm/thread_info.h
+591d6c21e0d2 kernel, fs: Introduce and use set_restart_fn() and arch_set_restart_data()
+d20c7a7b2490 x86/ioapic: Ignore IRQ2 again
+403fdabcc1bc perf/x86/intel: Fix a crash caused by zero PEBS status
+6d7724c9c507 PCI: rpadlpar: Fix potential drc_name corruption in store functions
+521f802e20bd iio: hid-sensor-temperature: Fix issues of timestamp channel
+4a418afad258 iio: hid-sensor-prox: Fix scale not correct issue
+8e97b9cae1e6 iio: hid-sensor-humidity: Fix alignment issue of timestamp channel
+7ffb3fa5b774 iio: gyro: mpu3050: Fix error handling in mpu3050_trigger_handler
+9a429caa80b0 iio: adis16400: Fix an error code in adis16400_initial_setup()
+cfdaec38d604 iio:adc:qcom-spmi-vadc: add default scale to LR_MUX2_BAT_ID channel
+5171d595e362 iio:adc:stm32-adc: Add HAS_IOMEM dependency
+27b028b9c373 usb: gadget: configfs: Fix KASAN use-after-free
+e93575764f70 USB: replace hardcode maximum usb string length by definition
+8ca5de14229b usb-storage: Add quirk to defeat Kindle's automatic unload
+2fd919108176 nvme-rdma: fix possible hang when failing to set io queues
+b6b7158beb0f scsi: lpfc: Fix some error codes in debugfs
+84cee271cfdb net/qrtr: fix __netdev_alloc_skb call
+a1507d7f825d sunrpc: fix refcount leak for rpc auth modules
+28e89394dde1 svcrdma: disable timeouts on rdma backchannel
+39e2d3ebcabf NFSD: Repair misuse of sv_lock in 5.10.16-rt30.
+09537286477e nvmet: don't check iosqes,iocqes for discovery controllers
+0fbf41006d8c btrfs: fix race when cloning extent buffer during rewind of an old root
+bb1256630524 tools build feature: Check if pthread_barrier_t is available
+635a002105dd perf: Make perf able to build with latest libbfd
+aa8a33764bd5 tools build: Check if gettid() is available before providing helper
+45c4df37e6c9 tools build feature: Check if eventfd() is available
+e95a27359bab tools build feature: Check if get_current_dir_name() is available
+3c9decd4fc68 perf tools: Use %define api.pure full instead of %pure-parser
+866f290149fb Revert "PM: runtime: Update device status before letting suppliers suspend"
+c49e70a5e7f2 bpf: Prohibit alu ops for pointer types not defining ptr_limit
+4d8880bd8255 net: dsa: b53: Support setting learning on port
+b4aa37d9632d bpf: Add sanity check for upper ptr_limit
+59ce8e5ecf2d bpf: Simplify alu_limit masking for pointer arithmetic
+92df5a174c6e bpf: Fix off-by-one for area size in creating mask to left
+95080b446ad6 ext4: check journal inode extents more carefully
+495729f8e3f7 ext4: don't allow overlapping system zones
+da4933175692 ext4: handle error of ext4_setup_system_zone() on remount
+fb71dfb8cca7 Merge branch 'upstream' into FBK
+0c9e886edff0 Merge tag 'v4.14.226' of https://source.codeaurora.org/quic/la/kernel/msm-4.14 into upstream
+7882d39d911a defconfig: Enable UClamp assist
+2c089b77d2d5 uclamp_assist: Refactor and implement
+667edf6aeb99 defconfig: Regenerate
