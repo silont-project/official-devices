@@ -1,138 +1,93 @@
+578de038c08b Merge remote-tracking branch 'origin/FBK' into weekly
+2c6b16818eaa treewide: drop PID map improvements
+6b162934752e Merge branch 'upstream' into FBK
+3adc18b7f1d0 Merge tag 'v4.14.230' of https://source.codeaurora.org/quic/la/kernel/msm-4.14 into upstream
+958e517f4e16 Linux 4.14.230
+1bba26850611 can: flexcan: flexcan_chip_freeze(): fix chip freeze for missing bitrate
+4086850f794d init/Kconfig: make COMPILE_TEST depend on HAS_IOMEM
+fa4261496d32 init/Kconfig: make COMPILE_TEST depend on !S390
+32f9a870ab6b bpf, x86: Validate computation of branch displacements for x86-64
+fee67e937a13 cifs: Silently ignore unknown oplock break handle
+9e62e366581b cifs: revalidate mapping when we open files for SMB1 POSIX
+12e4976fe70e ia64: mca: allocate early mca with GFP_ATOMIC
+a92224638efc scsi: target: pscsi: Clean up after failure in pscsi_map_sg()
+533dbcdc30fa x86/build: Turn off -fcf-protection for realmode targets
+c36b82c4d594 platform/x86: thinkpad_acpi: Allow the FnLock LED to change state
+0865d9288411 drm/msm: Ratelimit invalid-fence message
+d601353cc348 mac80211: choose first enabled channel for monitor
+f2600b3ecb02 mISDN: fix crash in fritzpci
+25c101b65a74 net: pxa168_eth: Fix a potential data race in pxa168_eth_remove
+7c12753c603a ARM: dts: am33xx: add aliases for mmc interfaces
+a9c350ed2966 fs: Reduce cache pressure
+0094404069f1 drm/msm/dsi-staging: enable ULPS
+fb567fe8002b drm/msm: do not notify events when the system is shutting down
+42c82b9f28b0 usb/phy/otg-wakelock: Reduce the wakelock timeout to 1 second
+8322989b8ae3 kernel/power: faster deepsleep
+d201ababd8d8 drivers: power: add timeouts to wakelocks
+77055664e4c0 drivers:i2c: Reduce touch latency by 0.5-1ms by just making it use block transfer mode for small transactions
+29d4cf234d91 surya: Block some wakelocks
+30b40e38cea8 Merge branch 'upstream' into FBK
+3be4a1c3f263 Merge tag 'v4.14.229' of https://source.codeaurora.org/quic/la/kernel/msm-4.14 into upstream
+002b1cb238b8 defconfig: drop slmk minfree
+605fb26b7c63 configs: Tune SLMK values
+0cc244011f40 Linux 4.14.229
+1e353852b3ae drivers: video: fbcon: fix NULL dereference in fbcon_cursor()
+2bcc14fce703 staging: rtl8192e: Change state information from u16 to u8
+6981144641b1 staging: rtl8192e: Fix incorrect source in memcpy()
+6b4aa86542b4 usb: gadget: udc: amd5536udc_pci fix null-ptr-dereference
+a110a1d03ac7 USB: cdc-acm: fix use-after-free after probe failure
+88fc6e1ae2ff USB: cdc-acm: downgrade message to debug
+0ea160742f4b USB: cdc-acm: untangle a circular dependency between callback and softint
+5b00c605a81f cdc-acm: fix BREAK rx code path adding necessary calls
+7d8a40162ebc usb: xhci-mtk: fix broken streams issue on 0.96 xHCI
+5dc2a68b1b57 usb: musb: Fix suspend with devices connected for a64
+99b948bd84de USB: quirks: ignore remote wake-up on Fibocom L850-GL LTE modem
+ae6d3a93a0a5 usbip: vhci_hcd fix shift out-of-bounds in vhci_hub_control()
+8aa6e548a5ee firewire: nosy: Fix a use-after-free bug in nosy_ioctl()
+2d956c596482 extcon: Fix error handling in extcon_dev_register
+8fb4f3e42f20 extcon: Add stubs for extcon_register_notifier_all() functions
+b48ed846ab92 pinctrl: rockchip: fix restore error in resume
+f34769a0b8d6 mm: writeback: use exact memcg dirty counts
+6f599379fd3a mm: fix oom_kill event handling
+ad6e2898e66e mem_cgroup: make sure moving_account, move_lock_task and stat_cpu in the same cacheline
+09031a8b68be mm: memcg: make sure memory.events is uptodate when waking pollers
+cfc5a8f43e6e mm: memcontrol: fix NR_WRITEBACK leak in memcg and system stats
+323900f695e0 reiserfs: update reiserfs_xattrs_initialized() condition
+e357ab38bd82 drm/amdgpu: check alignment on CPU page for bo map
+495751bbd898 drm/amdgpu: fix offset calculation in amdgpu_vm_bo_clear_mappings()
+40f7d9ada9e3 mm: fix race by making init_zero_pfn() early_initcall
+2640938c661e tracing: Fix stack trace event size
+18f8d1f55385 ALSA: hda/realtek: call alc_update_headset_mode() in hp_automute_hook
+f88cacc351dd ALSA: hda/realtek: fix a determine_headset_type issue for a Dell AIO
+90e3a4a4434c ALSA: usb-audio: Apply sample rate quirk to Logitech Connect
+64cf6c3156a5 bpf: Remove MTU check in __bpf_skb_max_len
+462634ba1a0d net: wan/lmc: unregister device when no matching device is found
+8194423fdaf8 appletalk: Fix skb allocation size in loopback case
+a348e106fcac net: ethernet: aquantia: Handle error cleanup of start on open
+bd68155a1f23 brcmfmac: clear EAP/association status bits on linkdown events
+d962f1b4ef54 ext4: do not iput inode under running transaction in ext4_rename()
+8b35f141b163 ASoC: rt5659: Update MCLK rate in set_sysclk()
+a58b76a34406 staging: comedi: cb_pcidas64: fix request_irq() warn
+775ddfceec18 staging: comedi: cb_pcidas: fix request_irq() warn
+bd784f97e1a4 scsi: qla2xxx: Fix broken #endif placement
+e022f0940d17 scsi: st: Fix a use after free in st_open()
+9fc708819ac5 vhost: Fix vhost_vq_reset()
+a3e7104639f2 powerpc: Force inlining of cpu_has_feature() to avoid build failure
+67bf16c48593 ASoC: cs42l42: Always wait at least 3ms after reset
+4acbc6604be8 ASoC: cs42l42: Fix mixer volume control
+16966e8c7336 ASoC: es8316: Simplify adc_pga_gain_tlv table
+f83e0ef9939e ASoC: sgtl5000: set DAP_AVC_CTRL register to correct default value on probe
+0e1e1afa70d8 ASoC: rt5651: Fix dac- and adc- vol-tlv values being off by a factor of 10
+3ad11d6ad300 ASoC: rt5640: Fix dac- and adc- vol-tlv values being off by a factor of 10
+863b8879a90b rpc: fix NULL dereference on kmalloc failure
+b3234384a256 ext4: fix bh ref count on error paths
+365c1c4583cf ipv6: weaken the v4mapped source check
+8569d30b846a selinux: vsock: Set SID for socket returned by accept()
+83515a096e4b mm: Reduce and micro-optimize PID map reads for arm64 where possible
+afca96e5c925 Revert "procfs: add seq_put_hex_ll to speed up /proc/pid/maps"
+c4cef7b54fb3 Revert "proc: add seq_put_decimal_ull_width to speed up /proc/pid/smaps"
+9d9088f4a0e1 Revert "proc: replace seq_printf on seq_putc to speed up /proc/pid/smaps"
+cac3f4bab828 Revert "proc: replace seq_printf by seq_put_smth to speed up /proc/pid/status"
+e415045c0816 Revert "DNM: fs: fuse: don't wait forever in request_wait_answer"
+23a26f4a55dd drivers: fp: silence spammy logs when fingerprint touched
 46a67ba0c2ca Merge remote-tracking branch 'origin/FBK' into weekly
-d8b1bc5498ba Merge branch 'upstream' into FBK
-6cbd50344090 Merge tag 'v4.14.228' of https://source.codeaurora.org/quic/la/kernel/msm-4.14 into upstream
-20e2d11477ac Revert "mm: Micro-optimize PID map reads for arm64"
-e5f103a5447a treewide: Weekly Automated Build
-bd634aa64163 Linux 4.14.228
-db108b67d813 xen-blkback: don't leak persistent grants from xen_blkbk_map()
-769207ad6afb can: peak_usb: Revert "can: peak_usb: add forgotten supported devices"
-e436212b3f7e ext4: add reclaim checks to xattr code
-d2ddd5417f6d mac80211: fix double free in ibss_leave
-749d2e33bfba net: qrtr: fix a kernel-infoleak in qrtr_recvmsg()
-43c9bffda3a2 net: sched: validate stab values
-2f2095844840 can: dev: Move device back to init netns on owning netns delete
-b8edc965a2e3 locking/mutex: Fix non debug version of mutex_lock_io_nested()
-531fa1b28c81 scsi: mpt3sas: Fix error return code of mpt3sas_base_attach()
-3674bcb773a4 scsi: qedi: Fix error return code of qedi_alloc_global_queues()
-be4153fe56ee perf auxtrace: Fix auxtrace queue conflict
-717d9d88fbd9 ACPI: scan: Use unique number for instance_no
-d39b29aa985d ACPI: scan: Rearrange memory allocation in acpi_device_add()
-aea037bb753c RDMA/cxgb4: Fix adapter LE hash errors while destroying ipv6 listening server
-a9923184fa20 net/mlx5e: Fix error path for ethtool set-priv-flag
-235d33fe3dfa arm64: kdump: update ppos when reading elfcorehdr
-2ed1838a5108 drm/msm: fix shutdown hook in case GPU components failed to bind
-8c6355741299 net: stmmac: dwmac-sun8i: Provide TX and RX fifo sizes
-0a6af7918896 net: cdc-phonet: fix data-interface release on probe failure
-83f1022ddc83 mac80211: fix rate mask reset
-95fdd07859d2 can: m_can: m_can_do_rx_poll(): fix extraneous msg loss warning
-ecd921f5e448 can: c_can: move runtime PM enable/disable to c_can_platform
-200107c1eb93 can: c_can_pci: c_can_pci_remove(): fix use-after-free
-170ae6f54252 can: peak_usb: add forgotten supported devices
-e7e81fdefa01 ftgmac100: Restart MAC HW once
-12dbbbab7fee net/qlcnic: Fix a use after free in qlcnic_83xx_get_minidump_template
-b58f83a38053 e1000e: Fix error handling in e1000_set_d0_lplu_state_82571
-02a51f63c48e e1000e: add rtnl_lock() to e1000_reset_task
-00db5f4ef9a7 net: dsa: bcm_sf2: Qualify phydev->dev_flags based on port
-57b7c1fc18b9 macvlan: macvlan_count_rx() needs to be aware of preemption
-dbc5d18db38e libbpf: Fix INSTALL flag order
-269c3638066c bus: omap_l3_noc: mark l3 irqs as IRQF_NO_THREAD
-ba73e621ced5 dm ioctl: fix out of bounds array access when no devices
-e110c8a8d921 ARM: dts: at91-sama5d27_som1: fix phy address to 7
-e960ef6a82bb arm64: dts: ls1043a: mark crypto engine dma coherent
-f3f23501d325 arm64: dts: ls1012a: mark crypto engine dma coherent
-a350a1ae2d10 arm64: dts: ls1046a: mark crypto engine dma coherent
-7f39bb5c47e6 squashfs: fix xattr id and id lookup sanity checks
-69606910678d squashfs: fix inode lookup sanity checks
-41cbb35e86b7 ia64: fix ptrace(PTRACE_SYSCALL_INFO_EXIT) sign
-d557400f750a ia64: fix ia64_syscall_get_set_arguments() for break-based syscalls
-5fbe977185b9 nfs: we don't support removing system.nfs4_acl
-352e23b69d39 drm/radeon: fix AGP dependency
-8511c7e98c2b u64_stats,lockdep: Fix u64_stats_init() vs lockdep
-16ff0df4f56f sparc64: Fix opcode filtering in handling of no fault loads
-c646c419af7b atm: idt77252: fix null-ptr-dereference
-2885d739c302 atm: uPD98402: fix incorrect allocation
-0a4605f18c8a net: wan: fix error return code of uhdlc_init()
-541ff27d29a1 net: hisilicon: hns: fix error return code of hns_nic_clear_all_rx_fetch()
-af528432f18c NFS: Correct size calculation for create reply length
-972cbf2ac21d nfs: fix PNFS_FLEXFILE_LAYOUT Kconfig default
-2304cbc924e1 gpiolib: acpi: Add missing IRQF_ONESHOT
-11081ea5e95b sun/niu: fix wrong RXMAC_BC_FRM_CNT_COUNT count
-4352c3fae8f2 net: tehuti: fix error return code in bdx_probe()
-93057d30fa85 ixgbe: Fix memleak in ixgbe_configure_clsu32
-498163bdff5c Revert "r8152: adjust the settings about MAC clock speed down for RTL8153"
-a8045f49c9d6 atm: lanai: dont run lanai_dev_close if not open
-ba71f74c74d2 atm: eni: dont release is never initialized
-afacbe5e7d6d powerpc/4xx: Fix build errors from mfdcr()
-7a7c9ced4cb1 net: fec: ptp: avoid register access when ipg clock is disabled
-9f1cb004b5e0 Merge branch 'upstream' into FBK
-52067db095dc Merge tag 'v4.14.227' of https://source.codeaurora.org/quic/la/kernel/msm-4.14 into upstream
-6aa3576b0bd9 net/sched: silence "quantum of class is big" log warning
-9f5c9ee4f890 scsi: ufs: disallow SECURITY_PROTOCOL_IN without _OUT
-86910ec19704 DNM: fs: fuse: don't wait forever in request_wait_answer
-9a63fe67e845 sched: Fix rq->nr_iowait ordering
-f04d88a818c1 sched: Fix data-race in wakeup
-3a5b9e5c1b9d sched: Fix race against ptrace_freeze_trace()
-c41e660b0e6b sched: Fix loadavg accounting race
-bba4e3a6a368 sched/core: Fix ttwu() race
-aeb9ed31dc70 smp: Optimize send_call_function_single_ipi()
-9eb0d61123b9 sched/core: Offload wakee task activation if it the wakee is descheduling
-28f1c4fab94d sched/core: Optimize ttwu() spinning on p->on_cpu
-20674ef0b448 sched/core: Fix preempt warning in ttwu
-a0108f625ad1 sched/core: Optimize try_to_wake_up() for local wakeups
-4a968a18ea98 sched/core: Skip rq lock in try_to_wake_up() when WALT is disabled
-72c40818872a mm: Micro-optimize PID map reads for arm64
-ebfe5f79ca8c qpnp-smb5: silence some kernel spam
-1790daab028f clk: qcom: clk-cpu-osm: Set min freq to 576MHz
-f78b5bafa3e6 nt36xxx: remove IRQF_NO_SUSPEND flag
-7a8b13b738d5 surya_defconfig: disable process reclaim
-e8242ba760ec ARM64: sdmmagpie: switch to calculated capacities
-d5ea42b2f873 ARM64: sdmmagpie: switch back to full freq tables
-670d6552eda8 Linux 4.14.227
-2d5025afb05b genirq: Disable interrupts for force threaded handlers
-fe778c33aaa9 ext4: fix potential error in ext4_do_update_inode
-470f69cb3742 ext4: do not try to set xattr into ea_inode if value is empty
-1b46d1d9d02e ext4: find old entry again if failed to rename whiteout
-c6159407348e x86: Introduce TS_COMPAT_RESTART to fix get_nr_restart_syscall()
-400e3df46a76 x86: Move TS_COMPAT back to asm/thread_info.h
-591d6c21e0d2 kernel, fs: Introduce and use set_restart_fn() and arch_set_restart_data()
-d20c7a7b2490 x86/ioapic: Ignore IRQ2 again
-403fdabcc1bc perf/x86/intel: Fix a crash caused by zero PEBS status
-6d7724c9c507 PCI: rpadlpar: Fix potential drc_name corruption in store functions
-521f802e20bd iio: hid-sensor-temperature: Fix issues of timestamp channel
-4a418afad258 iio: hid-sensor-prox: Fix scale not correct issue
-8e97b9cae1e6 iio: hid-sensor-humidity: Fix alignment issue of timestamp channel
-7ffb3fa5b774 iio: gyro: mpu3050: Fix error handling in mpu3050_trigger_handler
-9a429caa80b0 iio: adis16400: Fix an error code in adis16400_initial_setup()
-cfdaec38d604 iio:adc:qcom-spmi-vadc: add default scale to LR_MUX2_BAT_ID channel
-5171d595e362 iio:adc:stm32-adc: Add HAS_IOMEM dependency
-27b028b9c373 usb: gadget: configfs: Fix KASAN use-after-free
-e93575764f70 USB: replace hardcode maximum usb string length by definition
-8ca5de14229b usb-storage: Add quirk to defeat Kindle's automatic unload
-2fd919108176 nvme-rdma: fix possible hang when failing to set io queues
-b6b7158beb0f scsi: lpfc: Fix some error codes in debugfs
-84cee271cfdb net/qrtr: fix __netdev_alloc_skb call
-a1507d7f825d sunrpc: fix refcount leak for rpc auth modules
-28e89394dde1 svcrdma: disable timeouts on rdma backchannel
-39e2d3ebcabf NFSD: Repair misuse of sv_lock in 5.10.16-rt30.
-09537286477e nvmet: don't check iosqes,iocqes for discovery controllers
-0fbf41006d8c btrfs: fix race when cloning extent buffer during rewind of an old root
-bb1256630524 tools build feature: Check if pthread_barrier_t is available
-635a002105dd perf: Make perf able to build with latest libbfd
-aa8a33764bd5 tools build: Check if gettid() is available before providing helper
-45c4df37e6c9 tools build feature: Check if eventfd() is available
-e95a27359bab tools build feature: Check if get_current_dir_name() is available
-3c9decd4fc68 perf tools: Use %define api.pure full instead of %pure-parser
-866f290149fb Revert "PM: runtime: Update device status before letting suppliers suspend"
-c49e70a5e7f2 bpf: Prohibit alu ops for pointer types not defining ptr_limit
-4d8880bd8255 net: dsa: b53: Support setting learning on port
-b4aa37d9632d bpf: Add sanity check for upper ptr_limit
-59ce8e5ecf2d bpf: Simplify alu_limit masking for pointer arithmetic
-92df5a174c6e bpf: Fix off-by-one for area size in creating mask to left
-95080b446ad6 ext4: check journal inode extents more carefully
-495729f8e3f7 ext4: don't allow overlapping system zones
-da4933175692 ext4: handle error of ext4_setup_system_zone() on remount
-fb71dfb8cca7 Merge branch 'upstream' into FBK
-0c9e886edff0 Merge tag 'v4.14.226' of https://source.codeaurora.org/quic/la/kernel/msm-4.14 into upstream
-7882d39d911a defconfig: Enable UClamp assist
-2c089b77d2d5 uclamp_assist: Refactor and implement
-667edf6aeb99 defconfig: Regenerate
