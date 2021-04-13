@@ -1,0 +1,54 @@
+### SiLonT Kernel For SDM660 Platform devices
+### Supported device: whyred , tulip, wayne, lavender
+###
+
+###
+### I AM NOT SUPPORTING MIUI, IF IT DOESN'T BOOT ON MIUI, DON'T REPORT ANYTHING
+###
+
+### Changelog:
+- Now, kernel.zip are signed with AOSP keys
+- Blocked installation on Miui (Gooood byeeeee)
+- Compiled with GCC 10.2.1 since GCC 11 have some issue
+- Merge v4.4.266
+- Merged latest kernel.lnx.4.4.r{38}{42}{44}-rel
+- Fixed LED & vibration control (thanks to @ unknown_name123)
+- Fixed dt2w on Lavender
+- Disable simplified energy model sched feature (since our scheduler not ready yet)
+- Improve the scheduler
+- Extend efficient freq code on schedhorizon governor
+- Introduce lzo-rle zram comp algorithm
+- Introduce scompress & acompress zram api
+- Introduce anxiety io-sched & make it default io sched
+- BFQ Upstream & backports
+- Reverted CAF process_reclaim & add new one
+- Back to Pixel 2 Lowmemorykiller (to fix gaming perfomance regression)
+- Reverted some problematic mm commit
+- Memory allocator improvement
+- Fixup devfreq governor
+- Reduced vibration strength on sdm636 device
+- Use CONFIG_HZ_100 instead of 300
+- Some I can't remember
+- Etc (For full changelog check https://github.com/silont-project/android_kernel_xiaomi_sdm660)
+
+### Important Notes :
+- Need to flash EAS perf hal separately
+- Make sure you magisk version is 21.4 or above
+- OC(Effiecient Freq) Build are named EF on the zip. While the normal freq named EQ on the zip
+- FLASH OC AT YOUR OWN RISK!
+- Report bugs here --> https://t.me/pjorektneira
+
+### Special thanks:
+- Thanks to @ kiroio for testing tulip build
+- Thanks to @ dimasinc & @ Just_TheKai for testing lavender build
+- Thanks to @ nugrohotito12 & @ yuudachiP for testing jane build
+
+
+### Short Predicted QnA:
+1. Q: What is Efficient freq?
+     A: Efficient freq means: using most efficient frequencya A frequency that gives good performance but not sacrificing the batterry life.
+          you will see 1400mhz as your minimum cpu frequency
+          and kernel will use fewer freq step (still give good enough battery)
+
+2. Q: OC Sur!! when????
+    A: https://youtu.be/bFtcLJVN8yg
