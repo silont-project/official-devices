@@ -1,0 +1,18 @@
+SilonT - Kernel
+
+- Release 7 - Ame
+
+- Kernel version : 4.9.266
+
+- Compiler : SilonT Clang (Clang 13) with LTO
+
+-- Notes --
+
+Hello! We meet again, so this release isn't much, most of the changes are optimizations to the kernel's overall performance, It's hard to write it here so go read the history yourself ;-;
+Also, Low Memory Killer is now replaced with kerneltoast's Simple LMK, please do report if you experience frequent app crashes or keyboard being killed (This happens, lol) so I can tune it better :)
+
+A full changelog can be read on https://github.com/silont-project/kernel_realme_RMX1971/commits/11/master
+
+Feel free to tag me on telegram (@naogairu) if you experienced any bugs, DM is fine too
+
+Thanks! :D
