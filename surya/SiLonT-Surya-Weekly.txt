@@ -1,93 +1,102 @@
-578de038c08b Merge remote-tracking branch 'origin/FBK' into weekly
-2c6b16818eaa treewide: drop PID map improvements
-6b162934752e Merge branch 'upstream' into FBK
-3adc18b7f1d0 Merge tag 'v4.14.230' of https://source.codeaurora.org/quic/la/kernel/msm-4.14 into upstream
-958e517f4e16 Linux 4.14.230
-1bba26850611 can: flexcan: flexcan_chip_freeze(): fix chip freeze for missing bitrate
-4086850f794d init/Kconfig: make COMPILE_TEST depend on HAS_IOMEM
-fa4261496d32 init/Kconfig: make COMPILE_TEST depend on !S390
-32f9a870ab6b bpf, x86: Validate computation of branch displacements for x86-64
-fee67e937a13 cifs: Silently ignore unknown oplock break handle
-9e62e366581b cifs: revalidate mapping when we open files for SMB1 POSIX
-12e4976fe70e ia64: mca: allocate early mca with GFP_ATOMIC
-a92224638efc scsi: target: pscsi: Clean up after failure in pscsi_map_sg()
-533dbcdc30fa x86/build: Turn off -fcf-protection for realmode targets
-c36b82c4d594 platform/x86: thinkpad_acpi: Allow the FnLock LED to change state
-0865d9288411 drm/msm: Ratelimit invalid-fence message
-d601353cc348 mac80211: choose first enabled channel for monitor
-f2600b3ecb02 mISDN: fix crash in fritzpci
-25c101b65a74 net: pxa168_eth: Fix a potential data race in pxa168_eth_remove
-7c12753c603a ARM: dts: am33xx: add aliases for mmc interfaces
-a9c350ed2966 fs: Reduce cache pressure
-0094404069f1 drm/msm/dsi-staging: enable ULPS
-fb567fe8002b drm/msm: do not notify events when the system is shutting down
-42c82b9f28b0 usb/phy/otg-wakelock: Reduce the wakelock timeout to 1 second
-8322989b8ae3 kernel/power: faster deepsleep
-d201ababd8d8 drivers: power: add timeouts to wakelocks
-77055664e4c0 drivers:i2c: Reduce touch latency by 0.5-1ms by just making it use block transfer mode for small transactions
-29d4cf234d91 surya: Block some wakelocks
-30b40e38cea8 Merge branch 'upstream' into FBK
-3be4a1c3f263 Merge tag 'v4.14.229' of https://source.codeaurora.org/quic/la/kernel/msm-4.14 into upstream
-002b1cb238b8 defconfig: drop slmk minfree
-605fb26b7c63 configs: Tune SLMK values
-0cc244011f40 Linux 4.14.229
-1e353852b3ae drivers: video: fbcon: fix NULL dereference in fbcon_cursor()
-2bcc14fce703 staging: rtl8192e: Change state information from u16 to u8
-6981144641b1 staging: rtl8192e: Fix incorrect source in memcpy()
-6b4aa86542b4 usb: gadget: udc: amd5536udc_pci fix null-ptr-dereference
-a110a1d03ac7 USB: cdc-acm: fix use-after-free after probe failure
-88fc6e1ae2ff USB: cdc-acm: downgrade message to debug
-0ea160742f4b USB: cdc-acm: untangle a circular dependency between callback and softint
-5b00c605a81f cdc-acm: fix BREAK rx code path adding necessary calls
-7d8a40162ebc usb: xhci-mtk: fix broken streams issue on 0.96 xHCI
-5dc2a68b1b57 usb: musb: Fix suspend with devices connected for a64
-99b948bd84de USB: quirks: ignore remote wake-up on Fibocom L850-GL LTE modem
-ae6d3a93a0a5 usbip: vhci_hcd fix shift out-of-bounds in vhci_hub_control()
-8aa6e548a5ee firewire: nosy: Fix a use-after-free bug in nosy_ioctl()
-2d956c596482 extcon: Fix error handling in extcon_dev_register
-8fb4f3e42f20 extcon: Add stubs for extcon_register_notifier_all() functions
-b48ed846ab92 pinctrl: rockchip: fix restore error in resume
-f34769a0b8d6 mm: writeback: use exact memcg dirty counts
-6f599379fd3a mm: fix oom_kill event handling
-ad6e2898e66e mem_cgroup: make sure moving_account, move_lock_task and stat_cpu in the same cacheline
-09031a8b68be mm: memcg: make sure memory.events is uptodate when waking pollers
-cfc5a8f43e6e mm: memcontrol: fix NR_WRITEBACK leak in memcg and system stats
-323900f695e0 reiserfs: update reiserfs_xattrs_initialized() condition
-e357ab38bd82 drm/amdgpu: check alignment on CPU page for bo map
-495751bbd898 drm/amdgpu: fix offset calculation in amdgpu_vm_bo_clear_mappings()
-40f7d9ada9e3 mm: fix race by making init_zero_pfn() early_initcall
-2640938c661e tracing: Fix stack trace event size
-18f8d1f55385 ALSA: hda/realtek: call alc_update_headset_mode() in hp_automute_hook
-f88cacc351dd ALSA: hda/realtek: fix a determine_headset_type issue for a Dell AIO
-90e3a4a4434c ALSA: usb-audio: Apply sample rate quirk to Logitech Connect
-64cf6c3156a5 bpf: Remove MTU check in __bpf_skb_max_len
-462634ba1a0d net: wan/lmc: unregister device when no matching device is found
-8194423fdaf8 appletalk: Fix skb allocation size in loopback case
-a348e106fcac net: ethernet: aquantia: Handle error cleanup of start on open
-bd68155a1f23 brcmfmac: clear EAP/association status bits on linkdown events
-d962f1b4ef54 ext4: do not iput inode under running transaction in ext4_rename()
-8b35f141b163 ASoC: rt5659: Update MCLK rate in set_sysclk()
-a58b76a34406 staging: comedi: cb_pcidas64: fix request_irq() warn
-775ddfceec18 staging: comedi: cb_pcidas: fix request_irq() warn
-bd784f97e1a4 scsi: qla2xxx: Fix broken #endif placement
-e022f0940d17 scsi: st: Fix a use after free in st_open()
-9fc708819ac5 vhost: Fix vhost_vq_reset()
-a3e7104639f2 powerpc: Force inlining of cpu_has_feature() to avoid build failure
-67bf16c48593 ASoC: cs42l42: Always wait at least 3ms after reset
-4acbc6604be8 ASoC: cs42l42: Fix mixer volume control
-16966e8c7336 ASoC: es8316: Simplify adc_pga_gain_tlv table
-f83e0ef9939e ASoC: sgtl5000: set DAP_AVC_CTRL register to correct default value on probe
-0e1e1afa70d8 ASoC: rt5651: Fix dac- and adc- vol-tlv values being off by a factor of 10
-3ad11d6ad300 ASoC: rt5640: Fix dac- and adc- vol-tlv values being off by a factor of 10
-863b8879a90b rpc: fix NULL dereference on kmalloc failure
-b3234384a256 ext4: fix bh ref count on error paths
-365c1c4583cf ipv6: weaken the v4mapped source check
-8569d30b846a selinux: vsock: Set SID for socket returned by accept()
-83515a096e4b mm: Reduce and micro-optimize PID map reads for arm64 where possible
-afca96e5c925 Revert "procfs: add seq_put_hex_ll to speed up /proc/pid/maps"
-c4cef7b54fb3 Revert "proc: add seq_put_decimal_ull_width to speed up /proc/pid/smaps"
-9d9088f4a0e1 Revert "proc: replace seq_printf on seq_putc to speed up /proc/pid/smaps"
-cac3f4bab828 Revert "proc: replace seq_printf by seq_put_smth to speed up /proc/pid/status"
-e415045c0816 Revert "DNM: fs: fuse: don't wait forever in request_wait_answer"
-23a26f4a55dd drivers: fp: silence spammy logs when fingerprint touched
-46a67ba0c2ca Merge remote-tracking branch 'origin/FBK' into weekly
+7eede302503e Merge remote-tracking branch 'origin/FBK' into weekly
+0b673b68ae1b msm_bus: remove tracer
+6db2045696fe soc: qcom: Remove tracing
+867d484bce15 gpu: msm: Remove more tracing
+39421ce0304a configs: Make Ion allocate in page-sized chunks
+83e9326f5ca1 ion: shrink the lower order pools first
+a53ce6c5fa08 staging: android: ion: Bail out upon SIGKILL when allocating memory.
+d264ddbd27ba staging: android: Kconfig; Remove excessive hyphens
+7c382d220c67 staging: android: ion: Update wording in drivers/staging/android/ion/Kconfig
+deb3634540b9 staging: android: ion: Cleanup ion_page_pool_alloc_pages
+f90e4c5285b3 staging: android: ion: Remove dead code in ion_page_pool_free
+e8cbaa90836c staging: android: ion: Nuke ion_page_pool_init
+8831aefa431e staging: android: ion: Remove unused include files for ion_page_pool.c
+443f2ab48be8 staging: android: ion: Remove unused declaration ion_buffer_fault_user_mappings
+e1ff0c037e8e arm64: dts: pm6150: Switch to software debouncing for pon keys
+a52f59d303d2 input: qpnp-power-on: Separate software debounce delay from hardware
+fe548afec06f input: qpnp-power-on: Adapt software debounce to work for all keys
+95535646ff70 Merge tag 'LE.UM.4.3.3.r1-03300-SDX55' of https://source.codeaurora.org/quic/la/kernel/msm-4.14 into FBK
+55089cf157b7 Merge branch 'upstream' into FBK
+af8c003275a0 Merge tag 'v4.14.231' of https://source.codeaurora.org/quic/la/kernel/msm-4.14 into upstream
+cf256fbcbe34 Linux 4.14.231
+bea39f1eed72 xen/events: fix setting irq affinity
+125571123c8f perf map: Tighten snprintf() string precision to pass gcc check on some 32-bit arches
+522a0191944e netfilter: x_tables: fix compat match/target pad out-of-bound write
+42427209317d net: phy: broadcom: Only advertise EEE for supported modes
+06367c35f36d block: only update parent bi_status when bio fail
+bbae0543ef9c gfs2: report "already frozen/thawed" errors
+97329e011ffe drm/imx: imx-ldb: fix out of bounds array access warning
+67c9beda8497 KVM: arm64: Disable guest access to trace filter controls
+d21a8852e738 KVM: arm64: Hide system instruction access to Trace registers
+90bc77b7083a Revert "cifs: Set CIFS_MOUNT_USE_PREFIX_PATH flag on setting cifs_sb->prepath."
+df9aa96b613d net: ieee802154: stop dump llsec params for monitors
+33845d04d42b net: ieee802154: forbid monitor for del llsec seclevel
+b54e71dbe3ed net: ieee802154: forbid monitor for set llsec params
+266e3f2ef0d1 net: ieee802154: fix nl802154 del llsec devkey
+3a94a5b2e0ba net: ieee802154: fix nl802154 add llsec key
+3ee9f1bafd06 net: ieee802154: fix nl802154 del llsec dev
+1804bf103e73 net: ieee802154: fix nl802154 del llsec key
+37580e6837c0 net: ieee802154: nl-mac: fix check on panid
+d103fd20f053 net: mac802154: Fix general protection fault
+87f225abe010 drivers: net: fix memory leak in peak_usb_create_dev
+64aabb1aecae drivers: net: fix memory leak in atusb_probe
+f6420532cfd7 net: tun: set tun->dev->addr_len during TUNSETLINK processing
+bd7b29fb365e cfg80211: remove WARN_ON() in cfg80211_sme_connect
+e9c1341b4c94 usbip: fix vudc usbip_sockfd_store races leading to gpf
+d4a8169615a0 net/ncsi: Avoid GFP_KERNEL in response handler
+601e0eb63743 net/ncsi: Refactor MAC, VLAN filters
+f4e7325060fe net/ncsi: Add generic netlink family
+32e0a805c060 net/ncsi: Don't return error on normal response
+f013e2b4c8c6 net/ncsi: Improve general state logging
+e49c41505ae8 net/ncsi: Make local function ncsi_get_filter() static
+e789904a093b clk: socfpga: fix iomem pointer cast on 64-bit
+a94d89d1573a RDMA/cxgb4: check for ipv6 address properly while destroying listener
+9def0f437728 net/mlx5: Fix placement of log_max_flow_counter
+4dea7a1bd412 s390/cpcmd: fix inline assembly register clobbering
+9948ff55ed9c workqueue: Move the position of debug_work_activate() in __queue_work()
+0834c021f5d1 clk: fix invalid usage of list cursor in unregister
+318c973db612 clk: fix invalid usage of list cursor in register
+bf59100b9609 soc/fsl: qbman: fix conflicting alignment attributes
+d3539ecc4147 ASoC: sunxi: sun4i-codec: fill ASoC card owner
+1c1791e0ebee net/ncsi: Avoid channel_monitor hrtimer deadlock
+bb271612b3c7 ARM: dts: imx6: pbab01: Set vmmc supply for both SD interfaces
+439340105136 net:tipc: Fix a double free in tipc_sk_mcast_rcv
+22d33117e530 gianfar: Handle error code at MAC address change
+a4173e6b7ba3 sch_red: fix off-by-one checks in red_check_params()
+59a571e2f630 amd-xgbe: Update DMA coherency values
+be3a848d85f6 ASoC: wm8960: Fix wrong bclk and lrclk with pll enabled for some chips
+e3b12e7336b7 regulator: bd9571mwv: Fix AVS and DVFS voltage range
+d1e0d46fb158 i2c: turn recovery error on init to debug
+534d2cf487b9 usbip: synchronize event handler with sysfs code paths
+fbf3417833b0 usbip: stub-dev synchronize sysfs code paths
+5f2a149564ee usbip: add sysfs_lock to synchronize sysfs code paths
+3e9861a7925e net: sched: sch_teql: fix null-pointer dereference
+12ba6288b027 net: ensure mac header is set in virtio_net_hdr_to_skb()
+3d40b47bcc42 batman-adv: initialize "struct batadv_tvlv_tt_vlan_data"->reserved field
+cc2a577122d8 ARM: dts: turris-omnia: configure LED[2]/INTn pin as interrupt pin
+68ce97f7feb2 parisc: avoid a warning on u8 cast for cmpxchg on u8 pointers
+9264bb1315cf parisc: parisc-agp requires SBA IOMMU driver
+badefcb13da5 fs: direct-io: fix missing sdio->boundary
+f77ee7a287f5 ocfs2: fix deadlock between setattr and dio_end_io_write
+43d2e477bb0f ia64: fix user_stack_pointer() for ptrace()
+8d230ed064b6 net: ipv6: check for validity before dereferencing cfg->fc_nlinfo.nlh
+c9697faba3a1 xen/evtchn: Change irq_info lock to raw_spinlock_t
+892e1f065c1b nfc: Avoid endless loops caused by repeated llcp_sock_connect()
+02b99cae7133 nfc: fix memory leak in llcp_sock_connect()
+b1d5c07a3b59 nfc: fix refcount leak in llcp_sock_connect()
+538a6ff11516 nfc: fix refcount leak in llcp_sock_bind()
+42ccf59315f8 ASoC: intel: atom: Stop advertising non working S24LE support
+8cf440ffbbd7 ALSA: aloop: Fix initialization of controls
+208138387114 Merge 9aa0ad6e65f4658af636995bad9ec33366ee3fa4 on remote branch
+6f59fc3a6d33 fs: block more modules
+752a08b209b3 Import utils/sigma-dut from Xiaomi
+a5748dffc4c9 Merge tag 'LA.UM.8.9.r1-11900-SM6xx.0' of https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/data-kernel into FBK
+85ab0f70e7d8 Merge tag 'LA.UM.8.9.r1-11900-SM6xx.0' of https://source.codeaurora.org/quic/la/platform/vendor/opensource/audio-kernel into FBK
+2c2d7d1a36e9 Merge tag 'LA.UM.8.9.r1-11900-SM6xx.0' of https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/qca-wifi-host-cmn into FBK
+a85722914bd3 Merge tag 'LA.UM.8.9.r1-11900-SM6xx.0' of https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/fw-api into FBK
+f99695afdf2c Merge tag 'LA.UM.8.9.r1-11900-SM6xx.0' of https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/wlan/qcacld-3.0 into FBK
+79ba05d71f71 Merge tag 'LA.UM.8.9.r1-11900-SM6xx.0' of https://source.codeaurora.org/quic/la/kernel/msm-4.14 into FBK
+9aa0ad6e65f4 Merge "block: Fix use-after-free in blkdev_get()"
+5a9f03ddb6ad Merge "power: reset: Add support for EDL flashing over PCIe"
+e0b623102600 power: reset: Add support for EDL flashing over PCIe
+73683322df7b ARM: dts: msm: Add BOOT_CONFIG shift support for sdxprairie
