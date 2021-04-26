@@ -40,7 +40,7 @@ post() {
 
 [[ "${DEVICE}" = "miatoll" ]] && MAINTAINER="ThisIsTag" && PLING="https://www.pling.com/p/1437666/" && DEVICENAME="Xiaomi 720G series"
 
-[[ "${DEVICE}" = "RMX1971" ]] && MAINTAINER="megakampang" && PLING="https://www.pling.com/p/1413659/" && DEVICENAME="Realme 5 Pro"
+[[ "${DEVICE}" = "RMX1971" ]] && MAINTAINER="naogairu" && PLING="https://www.pling.com/p/1413659/" && DEVICENAME="Realme 5 Pro"
 
 [[ "${DEVICE}" = "RMX1851" ]] && MAINTAINER="Artoriaa" && PLING="https://www.pling.com/p/1439222/" && DEVICENAME="Realme 3 Pro"
 
@@ -63,7 +63,7 @@ BANNER="$HOME/$DEVICE.png"
 
 l1="${KERNEL_CODENAME}"
 l2="[Download]($PLING)"
-l3="[Cl & Notes](https://github.com/silont-project/official-devices/raw/master/${DEVICE}/${FILENAME}.txt)"
+l3="[Changelogs & Notes](https://github.com/silont-project/official-devices/raw/master/${DEVICE}/${FILENAME}.txt)"
 l4="[Support group](https://t.me/$GROUP)"
 l41="[Group](https://t.me/silont_support)"
 l42="[Channel](https://t.me/silont_updates)"
