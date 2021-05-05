@@ -1,0 +1,39 @@
+### SiLonT Kernel For SDM660 Platform devices
+### Supported device: whyred , tulip, wayne, lavender
+###
+
+###
+### I AM NOT SUPPORTING MIUI, IF IT DOESN'T BOOT ON MIUI, DON'T REPORT ANYTHING
+###
+
+### Changelog:
+- Rebased over SiLonT but basic (you may see some feature missing)
+- Compiled with Ngentod GCC 10.3.1
+- Merged v4.4.628
+- Merged latest CAF Tag
+- Backport ext4 from v5.4
+- Add possibility to use different wave shapes for haptic feedback and other vibration (For more info https://github.com/silont-project/android_kernel_xiaomi_sdm660/commit/99609939703509b1357bd822ad5c65f9b15b520b)
+- Add 12ms PELT support and enable it
+- Boost DDR when process become top-app
+- Affine hwcomposer to big CPUs
+- Only force UX tasks to big cores
+- Add cpuset assist & schedtune assist
+- Checkout msm_performance to 4.14
+- Imported binder from ACK 5.4
+- Implement LMK ADJ RBTREE from motorola
+- Zram upstream and add Zram deduplication feature
+- Zsmalloc upstream
+- Updated Wireguard driver to latest version
+- Many more I can't remember
+- Etc (For full changelog check https://github.com/silont-project/android_kernel_xiaomi_sdm660)
+
+### Important Notes :
+- Need to flash EAS perf hal separately
+- Make sure you magisk version is 21.4 or above
+- OC & Efficient Freq build are removed
+- Report bugs here --> https://t.me/pjorektneira
+
+### Special thanks:
+- Thanks to @ kiroio for testing tulip build
+- Thanks to @ dimasinc & @ Just_TheKai for testing lavender build
+- Thanks to @ nugrohotito12 & @ yuudachiP for testing jane build
