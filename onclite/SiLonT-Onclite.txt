@@ -1,19 +1,6 @@
 Changelogs:
-- Upstreamed to 4.9.264
-- Merged CAF TAG LA.UM.8.6.2.r1-08100-89xx.0
-- Merged CAF TAG LA.UM.9.6.2.r1-04200-89xx.0
-- Update wireguard to version 1.0.20210219
-- Enable zRAM writeback and Compressed with LZ4
-- Optimize and Debloat
-- Fix slower audio after merge kernel
-- Fix uninitialized variable usage and some memory leaks
-- Fix transposed panel_switch and panel_post_switch
-- Fix load balancing for big tasks
-- Reduce latency while processing ioctls and atomic ioctls
-- Reduce touch latency
-- Improve the scheduler
-- Change default SCHED_RR timeslice from 100 ms to 1 jiffy
-- Affine unbound workqueues to little CPUs by default
-- Add support for LLVM's Polly optimizer
+- Upstreamed to 4.9.268
+- Merged CAF TAG LA.UM.8.6.2.r1-09400-89xx.0
+- Merged CAF TAG LA.UM.9.6.2.r1-04600-89xx.0
 
 Notes : Don't forget to wipe dalvik and cache after flash kernel.
