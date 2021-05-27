@@ -50,7 +50,7 @@ post() {
 
 [[ "${DEVICE}" = "ginkgo" ]] && MAINTAINER="fakhiralkda" && PLING="https://www.pling.com/p/1413487/" && DEVICENAME="Redmi Note 8"
 
-[[ "${DEVICE}" = "RMX1911" ]] && MAINTAINER="dodyirawan85" && PLING="https://www.pling.com/p/placeholder/" && DEVICENAME="Realme Trinket"
+[[ "${DEVICE}" = "RMX1911" ]] && MAINTAINER="dodyirawan85" && PLING="https://www.pling.com/p/1519770/" && DEVICENAME="Realme Trinket"
 
 [[ -z "${GROUP}" ]] && GROUP="silont_support"
 
