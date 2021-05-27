@@ -1,0 +1,15 @@
+SilonT - Kernel
+
+- Release 1 - Sayu
+- Kernel version : 4.14.234
+- Compiler : SilonT Clang (Clang 13)
+
+-- Changelog --
+- Initial Release
+- Rebased to kernel.lnx.4.14.r4-rel and Upstreamed
+- Switch to pelt
+- Bring in new Energy cost data
+- Fix memory overlap and more
+
+-- Notes --
+- Not support for Stock Rom (RealmeUI)
