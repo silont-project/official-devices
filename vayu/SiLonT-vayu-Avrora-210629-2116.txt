@@ -1,0 +1,19 @@
+SilonT - Kernel
+
+Release 1 -Avrora
+
+-- Changelog --
+- Rebase to caf tag LA.UM.9.1.r1-10500-SMxxx0.QSSI12.0 
+- Linux Stable Version 4.14.191 
+- Built with Avalon clang 11+ LLVM Polly Optimizer 
+- bundled dtbo.img and dtb 
+- enable vdso32
+- Reduce VM_MAX_READAHEAD to 128KB 
+- Makefile: Use -O3 Optimization
+
+ (For full changelog check https://github.com/silont-project/kernel_xiaomi_vayu)
+
+Notes: - Tested On dotOs , MIUI EU 12.5.2 -Pixel Plus Ui
+
+
+- Thanks to @setsumiko @mochi_wwww for the bringup, @konsletzz,  @nrlhudda23 for testing, and @naogairu , @eve_enryu for helping
