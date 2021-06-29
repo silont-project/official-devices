@@ -52,6 +52,8 @@ post() {
 
 [[ "${DEVICE}" = "RMX1911" ]] && MAINTAINER="dodyirawan85" && PLING="https://www.pling.com/p/1519770/" && DEVICENAME="Realme Trinket"
 
+[[ "${DEVICE}" = "vayu" ]] && MAINTAINER="Artoriaa" && PLING="https://www.pling.com/p/1544835/" && DEVICENAME="Poco X3 Pro"
+
 [[ -z "${GROUP}" ]] && GROUP="silont_support"
 
 [[ -z "${XDA}" ]] && xdathread="${XDA}" || xdathread="🔹 [XDA Thread](${XDA})"
