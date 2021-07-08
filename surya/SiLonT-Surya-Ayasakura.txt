@@ -1,0 +1,19 @@
+Changelogs:
+* Upstreamed to 4.14.238
+* Merged upstream-f2fs-stable-linux-4.14.y from google kernel/common
+* Merged CAF tag 'LA.UM.9.1.r1-10600-SMxxx0.0'
+* add haptic feedback strength adjustment
+* Compiled with full LTO
+* disable selinux auditing
+* Remove some VLAs
+* Set Zstd as default ZRAM compression
+* Support KCAL color control
+* Backport LLVM=1
+* Enable CONFIG_TCP_CONG_BBR and set as default
+* Merged locking and jump label patchset
+* Enable and Shorten PELT ramp/delay halflife to 16 ms
+* other underhood improvements.. full change check https://github.com/silont-project/kernel_xiaomi_surya/commits/ayasakura
+
+Notes:
+* Only for OSS Vendor based rom
+* How to set haptic feedback strength? https://t.me/azrim_lab/7599
