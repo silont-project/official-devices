@@ -1,15 +1,53 @@
-- Upstreamed To v4.14.213
-- localversion: Remove dirty + sign from kernel name
-- printk: Add sleep time to timestamps 
-- Implement usb fastcharge
-- Added fsync on/off support
-- Import sdFAT driver 
-- drivers:i2c: Reduce touch latency by 0.5-1ms by just making it use block transfer mode for small transactions
-- Add boeffla wakelock blocker driver
-- Add wireguard version v1.0.20201221
-- Use -O3 on clang
-- sched/energy: Check out to Android 4.14 common kernel 
-- Enable Powersuspend
-- Build with Clang LTO
-- Implement Rapid_GC
-- Add module turbo charger inbuilt to make charging max to 5000mA
+- Upstream to v4.14.238
+- Merge caf tag LA.UM.9.1.r1-10200-SMxxx0.0
+- Merge wlan driver and techpack from caf tag LA.UM.9.1.r1-10200-SMxxx0.0
+- Upstream f2fs from kernel-common/upstream-f2fs-stable-linux-4.14.y
+- Recalculate energy model
+- Use efficient frequency
+- Remove 1516MHz Frequency
+- Use schedtune assist
+- Use uclamp and including uclamp module in anykernel
+- Use devfreq boost driver
+- Boost devfreq to 5931 freq
+- drm/msm/sde: Only clear dim layers when necessary
+- Switch to 250Hz kernel timer
+- faster deepsleep
+- usb/phy/otg-wakelock: Reduce the wakelock timeout to 1 second
+- import exfat driver by arter97
+- sched: core: increase sched_rt_runtime to 1000000
+- fs: increase vfs_cache_pressure 
+- mm: tweak values
+- sched: tweak sched_min_task_util_for_boost and sched_min_task_util_for_colocation
+- f2fs: Enlarge min_fsync_blocks to 20 
+- blk-throttle: Target 1ms latencies for throttling 
+- mm: Increase ratelimit pages value
+- sched: Do not give sleepers 50% more runtime
+- Adding file blocker by YaroST12
+- Enable BBR2 and Set by default
+- Added fsync on/off support.
+- Introducing Touchboost driver(disable by default)
+- msm_adreno_tz: add adrenoboost parameter 
+- adrenoboost: disabled by default
+- Add Simple LMK by kerneltoast
+- disable process reclaim
+- drop slmk minfree to 104
+- add boeffla wakelock driver and update to v1.1.0
+- Add KCAL control
+- Use LZ4 for compression algorithm
+- Use LTO for build
+
+Nb: If you facing slow charging, try to decrease your phone temperature to 36Celcius and below.
+
+
+==================================
+
+
+Credit:
+- https://github.com/silont-project
+- https://github.com/dereference23/positron_miatoll
+- https://github.com/kerneltoast/simple_lmk
+- https://github.com/kerneltoast/android_kernel_google_floral
+- https://github.com/Demon000
+- https://github.com/wight554
+- https://github.com/nullxception
+- All who has helping me 
