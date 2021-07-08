@@ -1,0 +1,33 @@
+### SiLonT Kernel For Xiaomi SDM660 Platform devices
+### Supported device: whyred , tulip, wayne, lavender
+###
+
+###
+### I AM NOT SUPPORTING MIUI, IF IT DOESN'T BOOT ON MIUI, DON'T REPORT ANYTHING
+###
+
+### Changelog:
+- Fixed dt2w
+- Compiled with Eva GCC & Linked with LLD
+- Add GCC graphite optimisation
+- Merged v4.4.274
+- Merged latest CAF Tag
+- Remove unnecessary boosting
+- Char/random update
+- Scheduler fix & improvement
+- Checkout cpufreq_schedutil to celtare21's Artemis
+- Reverted some patch that make big cpus having heavy work
+- Back to Pixel 2 LowMemoryKiller
+- Updated synaptic touchscreen (whyred) from 4.19
+- Updated Wireguard driver to latest version
+- Enable CDG, Hybla, and HTCP TCP
+- Many more I can't remember
+- Etc (For full changelog check https://github.com/silont-project/android_kernel_xiaomi_sdm660/tree/okinamo)
+
+### Important Notes :
+- Need to flash EAS perf hal separately
+- Make sure you magisk version is 21.4 or above
+- Report bugs here --> https://t.me/pjorektneira
+
+### Special thanks:
+- Thanks to all tester on https://t.me/pjorektneira
