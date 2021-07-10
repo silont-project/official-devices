@@ -1,0 +1,21 @@
+SiLonT - Kernel
+
+- Release 8 - Shion
+
+- Kernel version : 4.9.186
+
+- Compiler : SilonT Clang (Clang 13) with LTO
+
+-- Notes --
+
+Hi! So I did say Ame was going to be the last release until source for RUI 2.0 is up.
+But turns out, Ame had a few critical bugs that I missed during my testing. Sorry for that ;-;.
+So this time, i've made sure that all the issues that are reported are adressed, including video playback, which was pretty bad.
+This release also includes improvements to the Simple LMK driver.
+Additionally, I've removed some debugging messages that are redundant and audit is now disabled.
+
+For those who are interested, you can check the full list of change on our GitHub repository :
+https://github.com/silont-project/kernel_realme_RMX1971/commits/android-10.0
+
+That's it for today's release note, if you find any issue or want to give a suggestion, feel free to contact me on Telegram @naogairu
+Stay save, have a good day! :D
