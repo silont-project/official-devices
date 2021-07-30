@@ -1,0 +1,14 @@
+Changelogs:
+* Upstreamed to 4.14.241
+* Merged CAF Tag LA.UM.9.1.r1-10700-SMxxx0.QSSI12.0
+* Merged mm patches
+* Add simple LMK
+* Fixed DT2W
+* Remove hispeed freq garbage added by CAF
+* Silence more spamlogs
+* Enable I/O throttling
+* Hopefully fixed SOD for some users
+* etc..... Check https://github.com/silont-project/kernel_xiaomi_surya/commits/ayaka for full changelogs
+
+Notes:
+* Only for OSS Vendor based roms
