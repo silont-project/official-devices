@@ -1,0 +1,27 @@
+### SilonT Kernel Vayu ###
+
+• Release 2 -Lucia •
+
+---Changelog---
+
+- Compile with SilonT Clang & LTO
+- Upstream to v4.14.241
+- upstream f2fs stable
+- Merged caf 'LA.UM.9.1.r1-10700-SMxxx0.QSSI12.0'
+- Merged mm patches
+- Set LZ4 as default zram compression
+- Optimize ufs
+- Merged mm patches
+- Added KCAL 
+- Enable DCE
+- Disable caf cpu boost
+- Set gpu idle time out to 58ms
+- Switch to simple LMK
+- Zram Override disksize to 2560M
+- Disable DEBUG_KERNEL
+- etc..... Check https://github.com/silont-project/kernel_xiaomi_vayu/commits/Lucia for full changelogs
+
+--Notes--
+- support OSS and MIUI
+- Miui : tested  on oneOs 21.8.3
+- OSS : tested  on DOTOS - AncientOS - Nusantara - ArrowOS
