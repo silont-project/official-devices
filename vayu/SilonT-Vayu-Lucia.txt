@@ -22,6 +22,6 @@
 - etc..... Check https://github.com/silont-project/kernel_xiaomi_vayu/commits/Lucia for full changelogs
 
 --Notes--
-- support OSS and MIUI
+- support OSS VENDOR BASED , MIUI ROM and MIUI VENDOR BASED
 - Miui : tested  on oneOs 21.8.3
 - OSS : tested  on DOTOS - AncientOS - Nusantara - ArrowOS
