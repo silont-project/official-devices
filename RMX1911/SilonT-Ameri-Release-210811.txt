@@ -1,0 +1,17 @@
+SilonT - Kernel
+
+- Release 2 - Ameri
+- Kernel version : 4.14.243
+- Compiler : SilonT Clang (Clang 14)
+
+-- Changelog --
+- Upstreamed
+- Merge Security Patch (ASB-2021-08-05_4.14-q-release)
+- Switch to efficient freq
+- Added Kcal support
+- Added Adjustable Vibrator
+- Introduce devfreq boost
+- And more
+
+-- Notes --
+- Not support for Stock Rom (RealmeUI)
