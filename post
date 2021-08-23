@@ -31,12 +31,6 @@ post() {
 
 [[ "$DEVICE" = "whyred" ]] && MAINTAINER="eve\_enryu" && PLING="https://www.pling.com/p/1491356/" && DEVICENAME="Redmi Note 5 Pro"
 
-[[ "$DEVICE" = "tulip" ]] && MAINTAINER="eve\_enryu" && PLING="https://www.pling.com/p/1491356/" && DEVICENAME="Redmi Note 6 Pro"
-
-[[ "$DEVICE" = "lavender" ]] && MAINTAINER="eve\_enryu" && PLING="https://www.pling.com/p/1491359/" && DEVICENAME="Redmi Note 7"
-
-[[ "$DEVICE" = "jane" ]] && MAINTAINER="eve\_enryu" && PLING="https://www.pling.com/p/1491359/" && DEVICENAME="Mi A26X"
-
 [[ "$DEVICE" = "miatoll" ]] && MAINTAINER="ThisIsTag" && PLING="https://www.pling.com/p/1437666/" && DEVICENAME="Xiaomi 720G series"
 
 [[ "$DEVICE" = "RMX1971" ]] && MAINTAINER="naogairu" && PLING="https://www.pling.com/p/1413659/" && DEVICENAME="Realme 5 Pro"
