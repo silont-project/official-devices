@@ -7,6 +7,8 @@
 ###
 
 ### Changelog:
+- DROPPED SUPPORT FOR JASMINE, WAYNE, LAVENDER
+- DROPPED SUPPORT FOR NEWCAM VENDOR ROM
 - Rebased to CAF Kernel with Guaiyihu base
 - Source cleanup
 - Updated Ngentod GCC to 11.2.1 and LLD 14.0.0
