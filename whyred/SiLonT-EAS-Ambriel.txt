@@ -1,0 +1,29 @@
+### SiLonT Kernel For Xiaomi Redmi Note 5 Pro
+### Supported device: whyred
+###
+
+###
+### I AM NOT SUPPORTING MIUI, IF IT DOESN'T BOOT ON MIUI, DON'T REPORT ANYTHING
+###
+
+### Changelog:
+- Rebased to CAF Kernel with Guaiyihu base
+- Source cleanup
+- Updated Ngentod GCC to 11.2.1 and LLD 14.0.0
+- Use Efficient frequency
+- Use Performance governor on little cluster
+- Scheduler fixes
+- Use Simple LMK
+- Updated vibration config
+- Disabled coresight debug feature
+- Rewrite Ion & Iommu for clarity and performance
+- Set ZSTD as default zram comp
+- Many more I can't remember
+- Etc (For full changelog check https://github.com/silont-project/android_kernel_xiaomi_sdm660/tree/Ambriel)
+
+### Important Notes :
+- Make sure you magisk version is 21.4 or above
+- Report bugs here --> https://t.me/pjorektneira
+
+### Special thanks:
+- Thanks to all tester on https://t.me/pjorektneira
