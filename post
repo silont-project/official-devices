@@ -45,6 +45,8 @@ post() {
 
 [[ "$DEVICE" = "vayu" ]] && MAINTAINER="Artoriaa" && PLING="https://www.pling.com/p/1544835/" && DEVICENAME="Poco X3 Pro"
 
+[[ "$DEVICE" = "mi-sdm439" ]] && MAINTAINER="ChuckDXD" && PLING="https://www.pling.com/p/1589765/" && DEVICENAME="Xiaomi SDM439 devices"
+
 BANNER_LINK="https://github.com/silont-project/official-devices/raw/master/$DEVICE/$DEVICE.png"
 BANNER="$DEVICE.png"
 

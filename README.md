@@ -11,6 +11,7 @@ SiLonT Project
  - Redmi Note 5 Pro     (whyred)
  - Redmi Note 8         (ginkgo)
  - Redmi Note 9 Pro series (miatoll)
+ - Xiaomi sdm439 powered device (olive olivelite olivewood pine)
 
 ## Join our team ##
 Requirements:
