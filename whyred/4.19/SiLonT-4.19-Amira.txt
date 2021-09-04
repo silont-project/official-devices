@@ -1,0 +1,25 @@
+### SiLonT Kernel (4.19) For Xiaomi Redmi Note 5 Pro
+### Supported device: whyred
+###
+
+###
+### FOR 4.19 KERNEL BASED ROM ONLY!!!
+###
+
+### Changelog:
+- Initial release
+- Compiled with GCC LTO
+- Reverted Memory Management Fuckery by qcom
+- Upstreamed bfq from chromeos kernel
+- Checkout Scheduler code to Android Common Kernel (android-4.19-q)
+- Rewrite Ashmem & Iommu to improve clarity & performance
+- Recalculate energy model (from sultan bench)
+- Many more I can't remember
+- Etc (For full changelog check https://github.com/silont-project/kernel_xiaomi_whyred-4.19)
+
+### Important Notes :
+- Make sure your magisk version is 21.4 or above
+- Report bugs here --> https://t.me/pjorektneira
+
+### Special thanks:
+- @ gungkun for new banner
