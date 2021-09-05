@@ -53,7 +53,7 @@ BANNER="$DEVICE.png"
 [[ ! -f "$BANNER" ]] && wget "$BANNER_LINK" -O "$BANNER"
 [[ ! -z "$XDA" ]] && XDA_THREAD="🔹 [XDA](${XDA})
 " # This newline is intentional
-[[ ! -z "$DEVICE_GROUP" ]] && DEVICE_GROUP="[Support group](https://t.me/$GROUP)" || DEVICE_GROUP="[Support group](https://t.me/silont_support)"
+[[ ! -z "$DEVICE_GROUP" ]] && DEVICE_GROUP="[Support group](https://t.me/$DEVICE_GROUP)" || DEVICE_GROUP="[Support group](https://t.me/silont_support)"
 
 LINK="[Download]($PLING)"
 CHANGELOG="[Changelogs & Notes](https://github.com/silont-project/official-devices/raw/master/$DEVICE/$FILENAME.txt)"
