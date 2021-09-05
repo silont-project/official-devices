@@ -1,0 +1,41 @@
+SiLonT Kernel for mi-sdm439 (olive, olivelite, olivewood, pine)
+
+Codename : Sakura
+Kernel version : 4.9.282
+Supported version : Aosp with OSS vendor only
+Variant : 
+* Normal
+* OC = overclock LITTLE cluster to 1728MHz
+
+Changelogs:
+* Rebased over Joel a11/lineageos source
+* BLOCKED ANY POSSIBLE CANCER TWEAK FROM BEING BOOT
+* Compiled with Ngentod GCC + LTO + -O3 optimization
+* Switch to SLMK driver
+* Use performance on LITTLE cluster
+* Default maple I/O scheduler, lz4 ZRAM, and bbr TCP
+* Disable CAF Cpu boost
+* Enable devfreq boost & CPU input boost
+* Use power efficient workqueue
+* 70Hz for pine
+* Kcal & Klapse
+* Set kernel ticker to 500 Hz
+* Use UClamp instead of SchedTune
+* Switch to PELT scheduler
+* Add SRANDOM
+* Disable BCL 
+* Backport RCU taken from 4.14
+* Overclock GPU DDR bus
+* Dynamic fsync 2.0
+* Enable ZRAM writeback
+* Disable coresight
+* Etc
+
+Notes:
+* OC variant may not boot for some model
+* Downgrade wireguard version because it's really broken with Drone CI
+* Report bugs on support group
+
+Credits:
+* Joel for sources
+* Thanks for all tester
