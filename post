@@ -73,7 +73,7 @@ tg_msg \
 "🔹 $DEVICE_GROUP" \
 "$XDA_THREAD" \
 "*Join* $GROUP | $CHANNEL" \
-"#${DEVICENAME// /} #$DEVICE #StayNgelonT"
+"#$DEVICE #StayNgelonT"
 }
 
 help() {
