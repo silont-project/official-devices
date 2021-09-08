@@ -1,0 +1,21 @@
+Changelogs:
+* Rebased again (really mtf)
+* Upstreamed to 4.14.246
+* Merged CAF Tag LA.UM.9.1.r1-11100-SMxxx0.0
+* Dropped most brickports
+* Fixed SOD for sure!
+* Add simple LMK
+* Hide some tunables to prevent userspace to modify
+* Switch to uclamp (also add uclamp assist as well)
+* Set default uclamp min tunables (i don't need modules anymore)
+* Disable HWRANDOM and switch to SRANDOM
+* Enable HID_PLAYSTATION
+* Disable several unnecessary config and modules
+* Add and enable UFS Features
+* 
+* other under hood improvements
+* Check https://github.com/silont-project/kernel_xiaomi_surya/commits/raiden for full changelogs
+
+Notes:
+* Only for OSS or CAF Vendor based roms
+* MIUI? what kind of food is that?
