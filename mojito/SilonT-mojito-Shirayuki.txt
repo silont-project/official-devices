@@ -1,0 +1,30 @@
+### SilonT Kernel mojito ###
+
+---Changelog---
+
+- Rebase to caf tag 'LA.UM.9.1.r1-11200-SMxxx0.0'
+- Linux stable version 4.14.250
+- Built with Aosp clang 13 + LLVM Polly + full Lto
+- enable vdso32
+- Disable caf cpu boost
+- Set LZ4 as default zram compression
+- enable zRAM with writeback
+- Disable DEBUG_KERNEL
+- Disable several unnecessary config and modules
+- Switch to simple LMK
+- Makefile: Use -O3 Optimization
+- cfq-iosched: Micro optimize
+- Enable DCE
+- Add kcal
+- Check https://github.com/silont-project/kernel_xiaomi_mojito/commits/eleven for full changelogs
+
+--Notes!!--
+
+  -Not support MIUI
+
+  -Tested on, DotOs, Cherish,  pe+, AOSPK-a12, and FLUID-a12
+
+  -Support a12? Yeah support booted on FLUID-a12, and AOSPK-a12
+
+
+--Thanks to @ZIDAN44 for the bringup
