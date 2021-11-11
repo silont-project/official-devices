@@ -1,0 +1,29 @@
+SiLonT Kernel for mi-sdm439 (olive, olivelite, olivewood, pine)
+
+Codename : Jasmine
+Kernel version : 4.9.289
+Supported version : AOSP Android 11 & 12
+Variant :
+* Normal
+* OC = overclock LITTLE cluster to 1728MHz
+
+Changelogs:
+* Merge tag 'LA.UM.10.6.2.r1-00500-89xx.0'
+* drivers/char: adsprpc: Remove Qcom's PM_QoS implementation
+* Switch to new efficient freq
+* Switch to lzo for zram compression
+* Import binder from android-4.19-q
+* Disable Input Boost
+* Enable sound control
+* Wireguard Upstream
+* SLMK Upstream
+* Misc optimization
+
+Notes:
+* Only for OSS vendor. MIUI vendor isn't supported
+* OC variant may not boot for some model
+* Report bugs on support group
+
+Credits:
+* Joel & Akira for sources
+* Thanks for all tester
