@@ -1,0 +1,23 @@
+Changelogs:
+- A12 Support
+- Upstreamed to 4.14.257
+- Merged latest CAF Tags
+- merged exfat backports
+- drivers/gpu improvements
+- disable hw_random and enabled srandom
+- ufs improvements
+- Add frame threshold property for dsi controller
+- specify sync probes on some drivers
+- silence more spammy logs
+- merged tcp patchset
+- checkout kernel/schedutil & sched energy to android-4.14-stable
+- checkout clear_user, memchr, memcpy/memmove/ strncmp, strlen, strcmp, & memcmp to linux-next
+- merged latest wireguard
+- ARM64/dts: qcom: Increase surya panels ON delay to 10 ms
+- Eris more powerfull than Raiden
+- other underhood improvements
+- Check https://github.com/silont-project/kernel_xiaomi_surya/commits/staging for full changelogs
+
+Notes:
+- Only for OSS or CAF Vendor based roms
+- MIUI? what kind of food is that?
