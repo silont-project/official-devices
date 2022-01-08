@@ -1,0 +1,40 @@
+### SilonT Kernel Vayu ###
+
+---Changelog---
+
+- Rebase and merge to lates caf tag 'LA.UM.9.1.r1-11500-SMxxx0.0'
+- Linux stable version 4.14.261
+- Built with Aosp clang 14 + LLVM Polly + Full Lto
+- Enable KCAL color control
+- improve sched 
+- use default zram lz4
+- backport mm
+- remove unsed GPU governor
+- Enable FUSE shortcircuit
+- rpmsg: checkout native module from msm-5.4
+- remove gpu_frequency tracepoint 
+- Use Cpuset asisst pixel 4
+- Enable SchedTune Assist
+- Switch to SIMPLE LMK
+- Improve ufs
+- enable srandom
+- Ion Backport from msm-4.19
+- touchscreen: nt36xxx: Optimize interrupt CPU usage
+- Disable IKHEADERS
+- dts disable pcie
+- cfq-iosched: Apply tunes from Pixel 4
+- enable minimal tracing for iorapd
+- block/loop: move to prime affinity
+- dts Disable per-cgroup pressure tracking
+- disable debugfs
+- Reduce vfs cache pressure to 50
+- Backport af_unix
+- silence loging spam
+- Set gpu idle time out to 58ms
+- Fixed Fingerprint screenshot fpc and goodix on A12
+- Check https://github.com/silont-project/kernel_xiaomi_vayu/commits/twelve for full changelogs 
+
+--Notes-- 
+
+- Only for AOSP/Caf Roms A11/A12
+- Support Miui test on Miui pulse 12.5.7
