@@ -1,0 +1,17 @@
+###  SilonT Kernel Vayu ###
+
+---Changelog
+
+- fix force close when playing the game to long time
+- zram: Hard-code zram disksize to 3G
+- ZRAM compaction on automatic compaction
+- sched: Reduce minimal imbalance threshold
+- sched: Reduce busy load balance interval
+- update AOSP Clang to r437112b (14.0.1)
+- Check https://github.com/silont-project/kernel_xiaomi_vayu/commits/twelve for full changelog
+
+--notes--
+
+- Support for Aosp / Cafs roms A11/A12
+
+- MIUI? It will boot on MIUI. But I don't fucking care with that, I won't fix any issue for MIUI. Take your own risk            
