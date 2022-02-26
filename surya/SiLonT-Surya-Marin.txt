@@ -1,0 +1,9 @@
+Changelogs:
+- Rebase again
+- Upstreamed to 4.14.268
+- Merged Latest CAF Tags
+- I just lazy to write CL. Check by yourself here https://github.com/silont-project/kernel_xiaomi_surya/commits/marin
+
+Notes:
+- Only for OSS or CAF Vendor based roms
+- MIUI? what kind of food is that?
