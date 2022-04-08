@@ -1,0 +1,18 @@
+SiLonT - Kernel
+- Release 9 - Shikimori
+- Kernel version : 4.9.235
+- Compiler : xRage Clang (Clang 15) with LTO
+
+-- Changelog --
+- Upstreamed from 4.9.186 to 4.9.235
+- Revert Force Little Cluster to Only Use Max Freqs
+- Fixed Deep Sleep
+- Updated lz4 modules
+- Disabled Coresight Tracing
+- Reduce qcacld log spam
+- Merge upstream-f2fs-stable-linux-4.9.y
+- Implement f2fs rapid GC
+
+-- Notes --
+- Only Support RealmeUI 1.0 based firmware
+
