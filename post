@@ -33,7 +33,7 @@ post() {
 
 [[ "$DEVICE" = "miatoll" ]] && MAINTAINER="ThisIsTag" && PLING="https://www.pling.com/p/1437666/" && DEVICENAME="Xiaomi 720G series"
 
-[[ "$DEVICE" = "RMX1971" ]] && MAINTAINER="naogairu" && PLING="https://www.pling.com/p/1413659/" && DEVICENAME="Realme 5 Pro"
+[[ "$DEVICE" = "RMX1971" ]] && MAINTAINER="irawansalt" && PLING="https://www.pling.com/p/1413659/" && DEVICENAME="Realme 5 Pro"
 
 [[ "$DEVICE" = "onclite" ]] && MAINTAINER="BryanHafidzTorvalds" && PLING="https://www.pling.com/p/1464631/" && DEVICENAME="Redmi 7"
 
