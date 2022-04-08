@@ -2,14 +2,10 @@ SiLonT Project
 ==============
 
 ## Supported devices list ##
- - Mi A1                (tissot)
  - Poco X3 NFC          (surya/karna)
  - Poco X3 Pro          (vayu/bhima)
- - Realme 5/5i/5s       (realme_trinket)
  - Realme 5 Pro         (RMX1971)
- - Redmi 7              (onclite)
  - Redmi Note 5 Pro     (whyred)
- - Redmi Note 8         (ginkgo)
  - Redmi Note 9 Pro series (miatoll)
  - Xiaomi sdm439 powered device (olive olivelite olivewood pine)
 
