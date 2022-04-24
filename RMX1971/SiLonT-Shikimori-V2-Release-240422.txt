@@ -1,0 +1,16 @@
+SiLonT - Kernel
+- Release 10 - Shikimori-V2
+- Kernel version : 4.9.311
+- Compiler : Proton Clang 13
+
+-- Changelog --
+- Rebased over CAF tags LA.UM.9.8.r1-04700-SDM710.0
+- Upstreamed to 4.9.311
+- Fixed Random Reboot
+- Fixed Offline Charging
+- Switch to Pelt
+- And more
+
+-- Notes --
+- Only Support RealmeUI 1.0 based firmware
+
