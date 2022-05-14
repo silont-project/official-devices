@@ -1,0 +1,9 @@
+Changelogs:
+- Upstreamed to 4.14.278
+- Merged Latest CLO Tag LA.UM.9.1.r1-11900-SMxxx0.0
+- I forgot the rest. Sheeshhhhhhhhhh
+Check by yourself here https://github.com/silont-project/kernel_xiaomi_surya/commits/sheesh
+
+Notes:
+- Only for OSS or CAF Vendor based roms
+- MIUI? what kind of food is that?
