@@ -1,0 +1,34 @@
+### SiLonT Kernel (4.19) For Xiaomi Redmi Note 5/6 Pro
+### Supported device: whyred, tulip
+###
+
+###
+### FOR 4.19 KERNEL BASED ROM ONLY!!!
+###
+
+### Changelog:
+- Now, we supporting tulip (Redmi Note 6 Pro)
+- Compiled with AOSP Clang 14.0.7 and Full LTO optimisation
+- Rebase and clean ups
+- Switch back to oldcam
+- Merged May ASB
+- Merged latest CAF tag on kernel & subtree module
+- Arm64 memcpy upstream fixup
+- RNG driver upstream to mainline
+- Arm64 crypto upstream to mainline
+- Rewrite ION, Iommu, Ashmem for clarity and performance
+- Avoid dynamic memory allocation
+- Tune scheduler capacity_margin for SDM636
+- Multigenerational LRU supports 
+- Mm revert fixups
+- Fuse upstream & optimisation from 5.4
+- F2FS upstream & Enabled F2FS compression support
+- Mainline ExFAT driver
+- Reduced WiFi driver debugs
+- S2idle suspend feature
+- KGSL: Use DMA APIs for memory pool cache maintenance
+- A lot of rice from Sultan kernel
+- Miscellaneous changes
+
+### Important Notes :
+- Report bugs here --> https://t.me/pjorektneira
