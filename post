@@ -1,10 +1,13 @@
 #!/bin/bash
 #
-# Copyright (C) 2020 azrim.
+# Copyright (C) 2020-2022 azrim.
 # Copyright (C) 2021 nao04.
 # All rights reserved.
 
 # Vars #
+CDIR=$PWD
+DEVICE=$1
+JSONFILE=$CDIR/$DEVICE.json
 CHATID="chatidplaceholder"
 TG_TOKEN="tgtokenplaceholder"
 DATE=$(date +'%d %B %Y')
@@ -27,38 +30,24 @@ curl -s -F chat_id="$CHATID" -F sticker="$1" https://api.telegram.org/bot"$TG_TO
 }
 
 post() {
-[[ "$DEVICE" = "surya" ]] && MAINTAINER="Hiitagiii" && PLING="https://www.pling.com/p/1452895/" && DEVICENAME="Poco X3 NFC"
+# Parsing Json
+wget -O $JSONFILE https://raw.githubusercontent.com/silont-project/official-devices/master/$DEVICE/$DEVICE.json
 
-[[ "$DEVICE" = "whyred" ]] && MAINTAINER="eve\_enryu" && PLING="https://www.pling.com/p/1491356/" && DEVICENAME="Redmi Note 5 Pro"
-
-[[ "$DEVICE" = "miatoll" ]] && MAINTAINER="ThisIsTag" && PLING="https://www.pling.com/p/1437666/" && DEVICENAME="Xiaomi 720G series"
-
-[[ "$DEVICE" = "RMX1971" ]] && MAINTAINER="irawansalt" && PLING="https://www.pling.com/p/1413659/" && DEVICENAME="Realme 5 Pro"
-
-[[ "$DEVICE" = "onclite" ]] && MAINTAINER="BryanHafidzTorvalds" && PLING="https://www.pling.com/p/1464631/" && DEVICENAME="Redmi 7"
-
-[[ "$DEVICE" = "tissot" ]] && MAINTAINER="Yincen" && PLING="https://www.pling.com/p/1408418/" && DEVICENAME="MI A1"
-
-[[ "$DEVICE" = "ginkgo" ]] && MAINTAINER="fakhiralkda" && PLING="https://www.pling.com/p/1413487/" && DEVICENAME="Redmi Note 8"
-
-[[ "$DEVICE" = "RMX1911" ]] && MAINTAINER="dodyirawan85" && PLING="https://www.pling.com/p/1519770/" && DEVICENAME="Realme Trinket"
-
-[[ "$DEVICE" = "vayu" ]] && MAINTAINER="Artoriaa" && PLING="https://www.pling.com/p/1544835/" && DEVICENAME="Poco X3 Pro"
-
-[[ "$DEVICE" = "mi-sdm439" ]] && MAINTAINER="ChuckDXD" && PLING="https://www.pling.com/p/1589765/" && DEVICENAME="Xiaomi SDM439 devices"
-
-[[ "$DEVICE" = "mojito" ]] && MAINTAINER="Artoriaa" && PLING="https://www.pling.com/p/1618032/" && DEVICENAME="Redmi Note 10"
+MAINTAINER=$(jq -r '.MAINTAINER' $JSONFILE)
+PLING=$(jq -r '.PLING' $JSONFILE)
+DEVICENAME=$(jq -r '.DEVICENAME' $JSONFILE)
+DEVICEGROUP=$(jq -r '.DEVICEGROUP' $JSONFILE)
+CHANGELOG=$(jq -r '.CHANGELOG' $JSONFILE)
+CODENAME=$(jq -r '.CODENAME' $JSONFILE)
 
 BANNER_LINK="https://github.com/silont-project/official-devices/raw/master/$DEVICE/$DEVICE.png"
 BANNER="$DEVICE.png"
 
 [[ ! -f "$BANNER" ]] && wget "$BANNER_LINK" -O "$BANNER"
-[[ ! -z "$XDA" ]] && XDA_THREAD="🔹 [XDA](${XDA})
-" # This newline is intentional
-[[ ! -z "$DEVICE_GROUP" ]] && DEVICE_GROUP="[Support group](https://t.me/$DEVICE_GROUP)" || DEVICE_GROUP="[Support group](https://t.me/silont_support)"
+[[ ! -z "$DEVICEGROUP" ]] && DEVICEGROUP="[Support group]($DEVICEGROUP)" || DEVICEGROUP="[Support group](https://t.me/silont_support)"
 
 LINK="[Download]($PLING)"
-CHANGELOG="[Changelogs & Notes](https://github.com/silont-project/official-devices/raw/master/$DEVICE/$FILENAME.txt)"
+CHANGELOG="[Changelogs & Notes](https://github.com/silont-project/official-devices/raw/master/$DEVICE/$CHANGELOG)"
 GROUP="[Group](https://t.me/silont_support)"
 CHANNEL="[Channel](https://t.me/silont_updates)"
 
@@ -72,49 +61,12 @@ tg_msg \
 "" \
 "🔹 $LINK" \
 "🔹 $CHANGELOG" \
-"🔹 $DEVICE_GROUP" \
-"$XDA_THREAD" \
+"🔹 $DEVICEGROUP" \
+"" \
 "*Join* $GROUP | $CHANNEL" \
 "#$DEVICE #StayNgelonT"
 }
 
-help() {
-echo -e "Script to automate SiLonT kernel releases.\n" \
-"\n" \
-"Usage: ./post [-option] arguments\n" \
-"options:\n" \
-"* d - Device codename (e.g. surya)\n" \
-"* f - Changelog file name without .txt (e.g. SiLonT-Surya-tooru-20201212-1621)\n" \
-"  c - Kernel codename (e.g. tooru)\n" \
-"  g - Group username (e.g. azrim_lab - Don't set if don't have any)\n" \
-"  x - XDA thread link (e.g. https://xda-developers.com/blablabla - Don't set if don't have any)\n" \
-"  h - Print this help." \
-"\n" \
-"\n" \
-"Arguments with * means necessary, must be set"
-}
-
-while getopts d:f:c:g:x:h flag
-do
-    case "$flag" in
-        d) DEVICE=${OPTARG};;
-        f) FILENAME=${OPTARG};;
-        c) CODENAME=${OPTARG};;
-        g) DEVICE_GROUP=${OPTARG};;
-        x) XDA=${OPTARG};;
-        h) help
-           exit;;
-        \?) # Incorrect option
-           echo "Error: Invalid option !"
-           echo "Use post -h to list available arguments"
-           exit;;
-    esac
-done
-
-[[ -z $1 ]] && echo "ERROR: No argument given" && echo "Use post -h for available options" && exit
-
-[[ -z $DEVICE ]] && echo "ERROR: Device not set" && exit
-
-[[ -z $FILENAME ]] && echo "ERROR: File name not set" && exit
+[[ -z $1 ]] && echo "ERROR: No argument given" && echo "" && echo "Usage: post devicecodename" && echo "ex: post surya" && exit
 
 post
