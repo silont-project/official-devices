@@ -1,0 +1,29 @@
+### SiLonT Kernel (4.19) For Xiaomi Redmi Note 5/6 Pro
+### Supported device: whyred, tulip
+###
+
+###
+### FOR 4.19 KERNEL BASED ROM ONLY!!!
+###
+
+### Changelog:
+- Merged LA.UM.10.2.1.r1
+- Merged June ASB
+- General improvement for SMP2P Stack
+- General Improvement for Kernel Wakelock
+- General Improvement for Kernel Scheduler
+- Optimized memory remap system calls for better memory management on Android.
+- Virtual Memory Allocator optimization
+- Introduced Data Acess Monitor (DAMON) based reclaiming feature
+- Speed up mremap by 20x on large regions
+- Memory Advise backports from Android Common Kernel
+- Improved SLAB cache sanity checking
+- Upstreamed Random Number Generator driver from mainline
+- Disabled CAF sched isolation feature
+- Disabled CPU Hotplug feature
+- Reduce expensive memory allocator calls when SELinux AUDIT is disabled
+- Reduced haptics maximum voltage
+- Miscellaneous changes
+
+### Important Notes :
+- Report bugs here --> https://t.me/pjorektneira
