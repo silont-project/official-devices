@@ -1,18 +1,21 @@
-#!/bin/bash
+# !/bin/bash
 #
 # Copyright (C) 2020-2022 azrim.
 # Copyright (C) 2021 nao04.
 # All rights reserved.
 
-# Vars #
+# To export first
 CDIR=$PWD
 DEVICE=$1
-JSONFILE=$CDIR/$DEVICE.json
+
+# Vars
+BANNER="$DEVICE/$DEVICE.png"
+JSONFILE=$DEVICE/$DEVICE.json
 CHATID="chatidplaceholder"
+TG_DIR=$CDIR/telegram
 TG_TOKEN="tgtokenplaceholder"
 DATE=$(date +'%d %B %Y')
 
-TG_DIR=$(pwd)/telegram
 [[ ! -d "$TG_DIR" ]] && git clone https://github.com/fabianonline/telegram.sh/ "$TG_DIR"
 TELEGRAM="$TG_DIR"/telegram
 
@@ -31,19 +34,13 @@ curl -s -F chat_id="$CHATID" -F sticker="$1" https://api.telegram.org/bot"$TG_TO
 
 post() {
 # Parsing Json
-wget -O $JSONFILE https://raw.githubusercontent.com/silont-project/official-devices/master/$DEVICE/$DEVICE.json
+MAINTAINER=$(jq -r '.MAINTAINER' $JSONFILE | sed "s|_|\x5c_|g")
+PLING=$(jq -r '.PLING' $JSONFILE | sed "s|_|\x5c_|g")
+DEVICENAME=$(jq -r '.DEVICENAME' $JSONFILE | sed "s|_|\x5c_|g")
+DEVICEGROUP=$(jq -r '.DEVICEGROUP' $JSONFILE | sed "s|_|\x5c_|g")
+CHANGELOG=$(jq -r '.CHANGELOG' $JSONFILE | sed "s|_|\x5c_|g")
+CODENAME=$(jq -r '.CODENAME' $JSONFILE | sed "s|_|\x5c_|g")
 
-MAINTAINER=$(jq -r '.MAINTAINER' $JSONFILE)
-PLING=$(jq -r '.PLING' $JSONFILE)
-DEVICENAME=$(jq -r '.DEVICENAME' $JSONFILE)
-DEVICEGROUP=$(jq -r '.DEVICEGROUP' $JSONFILE)
-CHANGELOG=$(jq -r '.CHANGELOG' $JSONFILE)
-CODENAME=$(jq -r '.CODENAME' $JSONFILE)
-
-BANNER_LINK="https://github.com/silont-project/official-devices/raw/master/$DEVICE/$DEVICE.png"
-BANNER="$DEVICE.png"
-
-[[ ! -f "$BANNER" ]] && wget "$BANNER_LINK" -O "$BANNER"
 [[ ! -z "$DEVICEGROUP" ]] && DEVICEGROUP="[Support group]($DEVICEGROUP)" || DEVICEGROUP="[Support group](https://t.me/silont_support)"
 
 LINK="[Download]($PLING)"
