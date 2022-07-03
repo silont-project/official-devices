@@ -1,0 +1,20 @@
+Changelogs:
+- Upstreamed to 4.14.286
+- Merged Latest CLO Tag LA.UM.9.1.r1-12000.01-SMxxx0.QSSI12.0
+- Add support for EroFS (more info https://www.kernel.org/doc/html/latest/filesystems/erofs.html)
+- simple_lmk: expose simple_lmk_trigger()
+- slmk: lower vmpressure trigger threshold
+- mm: multi-gen LRU: call simple LMK if enabled 
+- configs: surya: Enable NTFS FS
+- configs: surya: enable USB MASS STORAGE
+- drop boeffla wakelock blocker 
+- backport hrtimer, block, crng
+- block: cfq-iosched: Port samsung optimizations from SM-N986B
+- cpu_input_boost: Introduce driver for event-based CPU boosting
+- configs: surya: debloat & Optimize
+- other underhood optimizations
+Check by yourself here https://github.com/silont-project/kernel_xiaomi_surya/commits/richelieu
+
+Notes:
+- Only for OSS Vendor or CAF Vendor based roms
+- MIUI? what kind of food is that?
