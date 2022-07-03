@@ -35,11 +35,11 @@ curl -s -F chat_id="$CHATID" -F sticker="$1" https://api.telegram.org/bot"$TG_TO
 post() {
 # Parsing Json
 MAINTAINER=$(jq -r '.MAINTAINER' $JSONFILE | sed "s|_|\x5c_|g")
-PLING=$(jq -r '.PLING' $JSONFILE | sed "s|_|\x5c_|g")
-DEVICENAME=$(jq -r '.DEVICENAME' $JSONFILE | sed "s|_|\x5c_|g")
-DEVICEGROUP=$(jq -r '.DEVICEGROUP' $JSONFILE | sed "s|_|\x5c_|g")
-CHANGELOG=$(jq -r '.CHANGELOG' $JSONFILE | sed "s|_|\x5c_|g")
-CODENAME=$(jq -r '.CODENAME' $JSONFILE | sed "s|_|\x5c_|g")
+PLING=$(jq -r '.PLING' $JSONFILE)
+DEVICENAME=$(jq -r '.DEVICENAME' $JSONFILE)
+DEVICEGROUP=$(jq -r '.DEVICEGROUP' $JSONFILE)
+CHANGELOG=$(jq -r '.CHANGELOG' $JSONFILE)
+CODENAME=$(jq -r '.CODENAME' $JSONFILE)
 
 [[ ! -z "$DEVICEGROUP" ]] && DEVICEGROUP="[Support group]($DEVICEGROUP)" || DEVICEGROUP="[Support group](https://t.me/silont_support)"
 
