@@ -47,6 +47,7 @@ LINK="[Download]($PLING)"
 CHANGELOG="[Changelogs & Notes](https://github.com/silont-project/official-devices/raw/master/$DEVICE/$CHANGELOG)"
 GROUP="[Group](https://t.me/silont_support)"
 CHANNEL="[Channel](https://t.me/silont_updates)"
+DEVICE=$(echo "$DEVICE" | sed 's/_/\\_/g')
 
 tg_sticker "CAACAgUAAxkBAAE-BLRf6Zi5wdrMZaYVBS0RWaj0CqJd2gACYQIAAndoICyTqqxZHIg5px4E"
 tg_msg \
