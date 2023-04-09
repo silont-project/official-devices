@@ -1,0 +1,24 @@
+SiLonT Kernel for Mi439 (olive, olivelite, olivewood, pine)
+
+Codename : Tithonia
+Kernel version : 4.9.337
+Supported version : Android 11 - 13 (OSS)
+Variant : 
+* Normal = no OC
+* OC = overclock LITTLE cluster to 1728MHz
+* ALMK = legacy LMK
+* LMKD = userspace LMKD
+
+Changelogs:
+* Rebase using official lineage kernel
+* Compiled with SD Clang 14.1.5
+* Enable PELT 12ms
+* UClamp & input boost
+* Use latest zstd as default ZRAM
+* RCU optimization
+* CFQ optimization
+* Check github for more
+
+Notes:
+* OC variant may not boot for some model
+* Report bugs on support group
