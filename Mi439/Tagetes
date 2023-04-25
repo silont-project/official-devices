@@ -1,0 +1,23 @@
+SiLonT Kernel for Mi439 (olive, olivelite, olivewood, pine)
+
+Codename : Tagetes
+Kernel version : 4.9.337
+Supported version : Android 11 - 13 (OSS)
+Variant : 
+* Normal = no OC
+* OC = overclock LITTLE cluster to 1728MHz
+* PLAIN = old plain partition
+* DYNAMIC = retrofit dynamic partition
+
+Changelogs:
+* Drop LMKD build
+* Sync with android13-5.15 binder
+* Enable wireguard
+* Build & update lz4 version to 1.9.4
+* Update zstd version to 1.5.4
+* No more performance default on LITTLE cluster
+* Check github for more
+
+Notes:
+* OC variant may not boot for some model
+* Report bugs on support group
