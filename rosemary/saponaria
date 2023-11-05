@@ -1,0 +1,19 @@
+SiLonT Kernel for rosemary (POCO M5s / Redmi Note 10S)
+
+Codename : Saponaria
+Kernel version : 4.14.328
+Supported version : Android 13 (AOSP S Vendor)
+Variant : 
+* KernelSU & non KernelSU
+
+Changelogs:
+* Initial release
+* https://github.com/silont-project/kernel_xiaomi_rosemary/commits/saponaria
+
+Notes:
+* THIS KERNEL IS FOR AOSP, DON'T REPORT ANYTHING RELATED TO MIUI
+* Report bugs on support group
+
+Credits:
+* Zain for base kernel
+* Acep, rad, Gi, and anyone who testing
