@@ -1,0 +1,15 @@
+SiLonT - Kernel
+
+- Release 4 - Filian
+- Kernel version : 4.14.331
+- Compiler : SilonT Clang (Clang 14)
+
+-- Changelog --
+- Upstreamed
+- Add Wireguard
+- Add BBR2 + AgileSD TCP
+- And more
+
+-- Notes --
+- Not support for Stock Rom (RealmeUI)
+- Not Support Dynamic ROM
