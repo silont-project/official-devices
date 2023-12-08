@@ -1,0 +1,14 @@
+SiLonT - Kernel
+
+- Release 5 - Filian R2
+- Kernel version : 4.14.332
+- Compiler : SilonT Clang (Clang 14)
+
+-- Changelog --
+- Upstreamed
+- Update KSU Version 11384
+- and more
+
+-- Notes --
+- Not support for Stock Rom (RealmeUI and Color OS)
+- Not Support Dynamic ROM
