@@ -1,0 +1,16 @@
+SiLonT - Kernel
+
+- Release 6 - Senko
+- Kernel version : 4.14.333
+- Compiler : WeebX Clang (Clang 18)
+
+-- Changelog --
+- Upstreamed
+- Update KSU Version
+- Introduce Anxiety I/O Scheduler
+- and More
+
+-- Notes --
+- Not support for Stock Rom (RealmeUI and Color OS)
+- Not Support Dynamic ROM
+- Only Support Non Dynamic OSS Custom ROM ( From Irawan's Tree )
