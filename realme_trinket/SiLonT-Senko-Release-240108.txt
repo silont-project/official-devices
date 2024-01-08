@@ -1,0 +1,19 @@
+SiLonT - Kernel
+
+- Release 7 - Senko R2
+- Kernel version : 4.14.335
+- Compiler : Proton Clang
+
+-- Changelog --
+- Upstreamed
+- Update KSU Version 11443
+- Kbuild: Support LLVM Polyhedral Loop Optimizations
+- thermal: Increase thermal trip points to 16
+- cfq-iosched: Apply RedHat suggested tunings for fast storage
+- cfq-iosched: Port samsung optimizations from SM-N986B
+- and more
+
+-- Notes --
+- Not support for Stock Rom (RealmeUI and Color OS)
+- Not Support Dynamic ROM
+- Only Support Non Dynamic OSS Custom ROM ( From Irawan's Tree )
