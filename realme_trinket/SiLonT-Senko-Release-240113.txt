@@ -1,0 +1,18 @@
+SiLonT - Kernel
+
+- Release 8 - Senko R3 [ EOL ]
+- Kernel version : 4.14.336
+- Compiler : Proton Clang
+
+-- Changelog --
+- Upstreamed
+- Update KSU Version 11448
+- RMX1911_defconfig: Add Configs For APatch
+- mm: watermark_scale_factor: Set to 32
+- UPSTREAM: kprobes: Fix random address output of blacklist file
+- UPSTREAM: sched/util_est: Fix util_est_dequeue() for throttled cfs_rq
+
+-- Notes --
+- Not support for Stock Rom (RealmeUI and Color OS)
+- Not Support Dynamic ROM
+- Only Support Non Dynamic OSS Custom ROM ( From Irawan's Tree )
