@@ -1,0 +1,15 @@
+SiLonT - Kernel
+
+- Release 9 - Senko [ Extended EOL ]
+- Kernel version : 4.14.339-openela
+- Compiler : Proton Clang
+
+-- Changelog --
+- Upstreamed 4.14.339-openela
+- Update KSU Version 11682
+- Introduce BORE Scheduler (Burst-Oriented Response Enhancer)
+
+-- Notes --
+- Not support for Stock Rom (RealmeUI and Color OS)
+- Not Support Dynamic ROM
+- Only Support Non Dynamic OSS Custom ROM ( From Irawan's Tree )
