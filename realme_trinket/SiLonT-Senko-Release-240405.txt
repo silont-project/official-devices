@@ -1,0 +1,24 @@
+SiLonT - Kernel
+
+- Release 10 - Senko [ Extended EOL ]
+- Kernel version : 4.14.341-openela
+- Compiler : Proton Clang
+
+-- Changelog --
+- Upstreamed 4.14.341-openela
+- Update KSU Version 11759
+- [TREEWIDE] Import KernelSU changes
+- defconfig: Switch to 500 Hz timer frequency
+- fs/proc: cmdline: Patch SafetyNet flags
+- fs/proc: cmdline: Patch vbmeta device state flag for SafetyNet
+- fs/proc: cmdline: Remove System-as-root flags
+- init: Ignore skip_initramfs if booting with super partition
+- thermal: core: Use high value to init low temp tracking thermal_zone
+- thermal: Create softlink by name for thermal_zone and cooling device
+- thermal: Create tz and cdev softlink in thermal class
+and more..
+
+-- Notes --
+- Not support for Stock Rom (RealmeUI and Color OS)
+- Tested On Non Dynamic ROM, Should Be Support For Dynamic ROM Too
+- DWYOR!!
